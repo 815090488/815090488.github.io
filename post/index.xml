@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>https://815090488.github.io/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Jul 2019 11:35:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://815090488.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java类加载器分类</title>
+      <link>https://815090488.github.io/post/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Wed, 31 Jul 2019 11:35:17 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%88%86%E7%B1%BB/</guid>
+      <description> Java类加载器分类 下面有关 java 类加载器,说法正确的是?() 正确答案: A B C D 你的答案: A B C D (正确) A、引导类加载器(bootstrap class loader):它用来加载 Java 的核心库,是用原生代码来实现的 B、扩展类加载器(extensions class loader):它用来加载 Java 的扩展库。 C、系统类加载器(system class loader):它根据 Java 应用的类路径(CLASSPATH)来加载 Java 类 D、tomcat 为每个 App 创建一个 Loader,里面保存着此 WebApp 的 ClassLoader。需要加载 WebApp 下的类时,就取出 ClassLoader 来使用  </description>
+    </item>
+    
+    <item>
+      <title>Java基础70问</title>
+      <link>https://815090488.github.io/post/java%E5%9F%BA%E7%A1%8070%E9%97%AE/</link>
+      <pubDate>Tue, 30 Jul 2019 20:39:46 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/java%E5%9F%BA%E7%A1%8070%E9%97%AE/</guid>
+      <description>标识符：字母、数字、下划线（_）、美元符号组成，数字不能开头
+switch语句参数类型：int 、short、byte、char、string、枚举。
+1.Java的八种基本类型？ Long、int、short、byte、double、float、char、boolean
+基本数据类型自动转换 byte-&amp;gt;short,char -&amp;gt; int -&amp;gt; long float -&amp;gt; double int -&amp;gt; float long -&amp;gt; double 记住：小可转大，大转小会失去精度！！！  2.面向对象的三大特征？ 封装、继承、多态
+3.引用类型有哪几种？ 引用类型有四种
+强引用(StrongReference) 软引用(SoftReference) 弱引用(WeakReference) 虚引用(PhantomReference)  4.自动装箱和自动拆箱？ int Integer double Double float Float short Short byte Byte long Long  自动装箱：
+自动装箱的作用就是将基本数据类型转换成对应的类的类型的对象
+//在-128~127 之外的数 Integer i1 =200; Integer i2 =200; System.out.println(&amp;quot;i1==i2: &amp;quot;+(i1==i2)); // 在-128~127 之内的数 Integer i3 =100; Integer i4 =100; System.out.println(&amp;quot;i3==i4: &amp;quot;+(i3==i4)); 输出的结果是： i1==i2: false i3==i4: true equals() 比较的是两个对象的值（内容）是否相同。 &amp;quot;==&amp;quot; 比较的是两个对象的引用（内存地址）是否相同，也用来比较两个基本数据类型的变量值是否相等。  自动拆箱：</description>
+    </item>
+    
+    <item>
+      <title>抛出异常throw、throws</title>
+      <link>https://815090488.github.io/post/%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8throwthrows/</link>
+      <pubDate>Mon, 29 Jul 2019 09:47:08 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8throwthrows/</guid>
+      <description> 抛出异常throw、throws 抛出异常有三种形式：一种是throw,另一种是throws，还有一个系统自动手抛异常
+系统自动手抛异常 throw:是语句抛出一个异常，自己手动抛出某些特定类型的异常 throws:是方法可能出现的异常用于throws声明，交给上层调用，自身并不主动处理 throw与throws的比较  throws出现在方法头中，throw出现在方法体中 throw是抛出异常，执行throw则一定会出现某种异常，throws是出现异常的可能性，并不一定会发生 throw和throws只是抛出或者可能抛出异常，但是不会由函数去处理异常，真正的处理异常由函数的上层调用处理。  </description>
+    </item>
+    
+    <item>
+      <title>Abstract和interface的区别</title>
+      <link>https://815090488.github.io/post/abstract%E5%92%8Cinterface%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 29 Jul 2019 08:45:36 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/abstract%E5%92%8Cinterface%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> Abstract和interface的区别 抽象类（Abstract class）:含有abstract修饰符的class即为抽象类  Abstract class不能创建实例化； Abstract class是单继承 含有Abstract 方法的类必须定义为Abstract class，但Abstract class类中的方法不必是抽象的 Abstract 类中定义的抽象方法必须在具体子类中实现，所以不能有抽象的构造方法和抽象的静态方法 如果子类没有实现父类的Abstract 方法，那么子类必须也定义为Abstract  接口（interface）：可以说是抽象类的一种特例，即接口中的所有方法都必须是抽象的  （1）接口中的方法定义默认为public abstract类型； （2）接口中的变量定义默认为public static final类型；  具体区别：  （1）抽象类可以有构造方法，但接口不能有构造方法； （2）抽象类可以有普通成员变量，但接口没有普通成员变量； （3）抽象类中可以包含非抽象的普通方法，而接口中的方法必须都是抽象的、不能有非抽象的方法； （4）抽象类中的抽象方法的访问类型可以是public、protected，但接口中的抽象方法只能是public类型且默认为public abstract类 （5）抽象类中可以包含静态方法，而接口中不能包含静态方法 （6）抽象类和接口都可以包含静态成员变量，抽象类的静态成员变量的访问类型可以任意，但接口中定义的变量只能是public static final类型，并且默认为public static final类型； （7）一个类可以实现多个接口，但只能继承一个抽象类；  </description>
+    </item>
+    
+    <item>
+      <title>Java的三大特性：封装、继承和多态</title>
+      <link>https://815090488.github.io/post/java%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%B0%81%E8%A3%85%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Sat, 27 Jul 2019 21:53:35 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/java%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%B0%81%E8%A3%85%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/</guid>
+      <description>Java的三大特性：封装、继承和多态 一、封装
+ 封装就是将类的信息隐藏在类内部、不允许外部程序直接访问，而是通过该类的方法实现对隐藏信息的操作和访问。（get/set方法）  public class Test{ private String username; public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } }  二、继承
+ 继承是类与类的一种关系，比较像集合中的从属关系，
+ 在java中是单继，子类只有一个父类。
+  //父类 public class Animal{ public String name; public int age; public void run(){ System.out.println(&amp;quot;动物都会跑&amp;quot;) } } //子类 public class cat extends Animal{ }  三、多态
+ 多态指的是对象的多种形态、
+ 多态有两种：
+ 引用多态：父类的引用可以指向本类的对象；父类的引用可以指向子类的对象  //父类 public class Animal{ public String name; public int age; public void run(){ System.</description>
+    </item>
+    
+    <item>
+      <title>Linux让项目在后台一直运行</title>
+      <link>https://815090488.github.io/post/linux%E4%B8%8B%E5%A6%82%E4%BD%95%E8%AE%A9jar%E5%8C%85%E7%A8%8B%E5%BA%8F%E5%9C%A8%E5%90%8E%E5%8F%B0%E4%B8%80%E7%9B%B4%E8%BF%90%E8%A1%8C/</link>
+      <pubDate>Sat, 27 Jul 2019 09:10:19 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/linux%E4%B8%8B%E5%A6%82%E4%BD%95%E8%AE%A9jar%E5%8C%85%E7%A8%8B%E5%BA%8F%E5%9C%A8%E5%90%8E%E5%8F%B0%E4%B8%80%E7%9B%B4%E8%BF%90%E8%A1%8C/</guid>
+      <description> Linux下让项目在后台一直运行  ##### shell命令  nohup java -jar XXXXXX.jar &amp;amp;   &amp;amp;:让程序在后台一直运行 nohup:自动生成nohup.out文件，位置在当前目录，用途是不挂断的运行命令   退出  exit  退出shell命令的时候，不可以直接关闭程序，应该输入退出命令退出。
+ 查看运行进程  ps -ef|grep java   停止进程运行  kill -9 2889(运行的进程id)     </description>
+    </item>
+    
+    <item>
+      <title>Springboot启动找不到mapper</title>
+      <link>https://815090488.github.io/post/springboot%E5%90%AF%E5%8A%A8%E6%89%BE%E4%B8%8D%E5%88%B0mapper/</link>
+      <pubDate>Fri, 19 Jul 2019 09:48:43 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/springboot%E5%90%AF%E5%8A%A8%E6%89%BE%E4%B8%8D%E5%88%B0mapper/</guid>
+      <description> Springboot启动找不到mapper Description: Field userService in com.luyao.community.controller.AuthorizeController required a bean of type &#39;com.luyao.community.mapper.UserMapper&#39; that could not be found. The injection point has the following annotations: - @org.springframework.beans.factory.annotation.Autowired(required=true) Action: Consider defining a bean of type &#39;com.luyao.community.mapper.UserMapper&#39; in your configuration.  解决办法  在启动项中添加@MapperScan(&amp;ldquo;com.luyao.community.mapper&amp;rdquo;)注解  @SpringBootApplication @MapperScan(&amp;quot;com.luyao.community.mapper&amp;quot;) public class DemoApplication { public static void main(String[] args) { SpringApplication.run(DemoApplication.class, args); } }  </description>
+    </item>
+    
+    <item>
+      <title>MVC开发模式和MyBatis</title>
+      <link>https://815090488.github.io/post/mvc%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 26 Jun 2019 10:29:53 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/mvc%E6%A8%A1%E5%BC%8F/</guid>
+      <description> MVC开发者模式  M: Model 模型,实体类和业务和 dao
+ V: view 视图. JSP
+ C:Controller 控制器,servlet
+  3.1 作用:视图和逻辑分离
+ MVC 适用场景:大型项目开发.
+ 图示例
+  5.1 先设计数据库
+5.2 先写实体类
+5.3 持久层
+5.4 业务逻辑5.5 控制器
+MyBatis简介 </description>
+    </item>
+    
+    <item>
+      <title>Spring注解驱动开发</title>
+      <link>https://815090488.github.io/post/spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8/</link>
+      <pubDate>Mon, 24 Jun 2019 16:02:10 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/spring%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8/</guid>
+      <description>Spring注解驱动开发 1、@Configuration 配置类的配置文件注解（写一个配置类）
+2、@Bean 给容器注册一个Bean ;类型为返回值，id默认是使用方法名作为id,自定义使用value=“ ”自定义
+&amp;lt;bean id=&amp;quot;person&amp;quot; class=&amp;quot;com.atguigu.bean.Person&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;name&amp;quot; value=&amp;quot;张三&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;age&amp;quot; value=&amp;quot;19&amp;quot;/&amp;gt; &amp;lt;/bean&amp;gt;  @ComponentScan(value = &amp;quot;com.atguigu&amp;quot;, includeFilters = { @ComponentScan.Filter(type = FilterType.CUSTOM,classes = {MyTypeFilter.class}) },useDefaultFilters = false) public class MainConfig { //给容器中注册一个bean；类型为返回值的类型；id默认是使用方法名作为id，也可以使用value进行指定 @Bean(value = &amp;quot;person001&amp;quot;) public Person person(){ return new Person(&amp;quot;李四&amp;quot;,13); } }  3、@ComponentScan @ComponentScan(value = &amp;quot;com.atguigu&amp;quot;)value指定要扫描的包  @ComponentScan扫描包相当于xml文件中的
+&amp;lt;context:component-scan base-package=&amp;quot;com.atguigu&amp;quot; use-default-filters=&amp;quot;false&amp;quot;&amp;gt; &amp;lt;context:include-filter type=&amp;quot;annotation&amp;quot; expression=&amp;quot;org.springframework.stereotype.Controller&amp;quot;/&amp;gt; &amp;lt;/context:component-scan&amp;gt; //use-default-filters=&amp;quot;false&amp;quot;禁用掉默认的过滤规则，才能使用includeFilters //includeFilters只扫描的包，是一个数组  @ComponentScan(value = &amp;quot;com.atguigu&amp;quot;,excludeFilters = { @ComponentScan.</description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>https://815090488.github.io/post/spring/</link>
+      <pubDate>Thu, 06 Jun 2019 23:52:34 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/spring/</guid>
+      <description>一、Spring Coer 1、Spring 框架控制反转（IOC）容器  IoC也称为依赖注入(DI)。它是一个过程，对象仅通过构造函数、工厂方法的参数或在从工厂方法构造或返回对象实例后在对象实例上设置的属性来定义它们的依赖关系(即与它们一起工作的其他对象)。然后，容器在创建bean时注入这些依赖项。从根本上说，这个过程是bean本身的逆(因此是名称、控制反转)，它通过使用类的直接构造或服务定位器模式等机制来控制其依赖项的实例化或位置。 org.springframework.beans和org.springframework.context包是SpringFramework的IoC容器的基础  2.集装箱概况（ Container Overview）  org.springframework.context.ApplicationContext接口表示SpringIoC容器，并负责实例化、配置和组装bean。容器通过读取配置元数据获取关于要实例化、配置和组装哪些对象的说明。  3、实例化容器 ApplicationContext context = new ClassPathXmlApplicationContext(&amp;quot;services.xml&amp;quot;, &amp;quot;daos.xml&amp;quot;);  4、使用JSR 330标准注释 从Spring3.0开始，Spring提供了对JSR-330标准注释(依赖注入)的支持。这些注释的扫描方式与Spring注释相同。要使用它们，您需要在类路径中拥有相关的JAR。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.inject&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.inject&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;   依赖注入@Inject和@Named而不是@Autowired，你可以用@javax.inject.Inject`  import javax.inject.Inject; public class SimpleMovieLister { private MovieFinder movieFinder; @Inject public void setMovieFinder(MovieFinder movieFinder) { this.movieFinder = movieFinder; } public void listMovies() { this.movieFinder.findMovies(...); ... } }  import javax.inject.Inject; import javax.inject.Provider; public class SimpleMovieLister { private Provider&amp;lt;MovieFinder&amp;gt; movieFinder; @Inject public void setMovieFinder(Provider&amp;lt;MovieFinder&amp;gt; movieFinder) { this.</description>
+    </item>
+    
+    <item>
+      <title>SpringBoot简单笔记</title>
+      <link>https://815090488.github.io/post/springboot/</link>
+      <pubDate>Wed, 05 Jun 2019 20:17:28 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/springboot/</guid>
+      <description>SpringBoot简单笔记 1、SpringBoot的简介 简化Spring应用开发的一个框架 整个Spring技术栈的一个大整合 J2EE开发的一站式解决方案  2、微服务 微服务：架构风格（服务微化）
+一个应用应该是一组小型服务，可以通过HTTP的方式互通；
+单体应用：ALL IN ONE
+微服务：每一个功能元素最终都是一个可独立替换和独立升级的软件单元
+3、SpringBoot的相关依赖 &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.5.RELEASE&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;  4、SpringBoot的简单部署 &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;  5、SpringBoot的探究 1、启动器 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  spring-boot-starter-web
+spring-boot-starter:spring-boot场景启动器，帮我们导入web模块正常运行运行所依赖的组件
+Spring Boot将所有的功能场景抽取出来，做成一个starter（启动器），只需要在项目中引入这些starter相关场景的所有依赖都会导入进入。
+2、主程序类，主入口类 /** * @SpringBootApplication 来标注一个主程序类，说明这是一个Spring Boot应用 */ @SpringBootApplication public class HelloWorldMainApplication { public static void main(String[] args) { // Spring应用启动起来 SpringApplication.</description>
+    </item>
+    
+    <item>
+      <title>Public、private和protected的区别</title>
+      <link>https://815090488.github.io/post/publicprivate%E5%92%8Cprotected%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 28 May 2019 23:04:36 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/publicprivate%E5%92%8Cprotected%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> public、private和protected的区别 这四个作用域的可见范围如下表所示
+如果在修饰元素上面没有写任何访问修饰符，则表示friendly
+   作用域 当前类 同一个package 子孙类 其他package     public √ √ √ √   protected √ √ √ ×   friendly √ √ × ×   private √ × × ×    </description>
+    </item>
+    
+    <item>
+      <title>Overload和Override的区别</title>
+      <link>https://815090488.github.io/post/overload%E5%92%8Coverride%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 28 May 2019 23:01:45 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/overload%E5%92%8Coverride%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> Overload和Override的区别 1、方法的重写Override  两同：方法名和参数都相同 两小：  子类返回类型小于等于父类方法返回类型 子类抛出异常小于等于父类方法抛出异常  一大：子类访问权限大于等于父类方法的访问权限 父类的成员方法只能被它的子类重写 声明为final的方法不能被重写 明为static的方法不能被重写，但是能够被再次声明。（static和final的都不能被重写） 子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为private和final的方法。 子类和父类不在同一个包中，那么子类只能够重写父类的声明为public和protected的非final方法。 构造方法不能被重写。（构造方法属于static的） 如果不能继承一个方法，则不能重写这个方法。  2、方法的重载overload  方法名相同，但参数类型和个数可以不相同，返回值类型可以不相同 方法重载就是在类中创建多个方法，方法名相同，参数列表不同，调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法，体现多态性； 【构造方法的重载】：只需要看参数即可，如果想在一个构造方法中调用另一个构造方法，那么可以使用this()的方法调用，this()括号中的参数表示目标构造方法的参数，this()必须要作为构造方法的第一跳语句，换句话说，this()之前不能有任何可执行的代码。  3、重载和重写的区别  形式
+ 重写：方法名、返回值、参数列表都相同
+ 重载：方法名相同，参数列表不同
+  范围
+ 重写，发生在继承的父子类中
+ 重载，是编译时静态分派，同一个类中
+   </description>
+    </item>
+    
+    <item>
+      <title>String、StringBuffer和StringBuilder的区别</title>
+      <link>https://815090488.github.io/post/stringstringbuffer%E5%92%8Cstringbuilder%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 28 May 2019 13:34:50 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/stringstringbuffer%E5%92%8Cstringbuilder%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> String、StringBuffer和StringBuilder的区别 1.String和StringBuffer的区别  Java平台提供了两个类，String和StringBuffer，它们可以存储和操作字符串，即包含多个字符串的字符数据，String类表示内容不可改变的字符串。而StringBuffer类表示内容可以被修改的字符串，当你知道字符数据要改变的时候，你就可以使用StringBuffer。典型地，你可以使用StringBuffer来动态构造字符数据，另外，String实现了equals方法，new String(&amp;ldquo;abc&amp;rdquo;).equals(new String(&amp;ldquo;abc&amp;rdquo;))的结果为true，而StringBuffer没有实现equals方法，所以，new StringBuffer(”abc“).equals(&amp;ldquo;abc&amp;rdquo;)的结果为false. String覆盖了equals的方法和hashCode方法，而StringBuffer没有覆盖equals方法和hashCode方法，所以，将StringBuffer对象存储进Java集合类中时会出现问题。
+String覆盖了equals的方法和hashCode方法，而StringBuffer没有   2.StringBuffer和StringBuilder的区别  StringBuffer和StringBuilder类都表示内容可以被修饰的字符串，StringBuilder是线程不安全的，运行效率高，如果一个字符串变量是在方法里面定义，这种情况只可能有一个线程访问它，不存在线程不安全的因素了，则用StringBuilder。如果要在类里面定义成员变量，并且这个类的实例对象会在多线程环境下使用，那么最好用StringBuffer。  </description>
+    </item>
+    
+    <item>
+      <title>SprigMVC</title>
+      <link>https://815090488.github.io/post/sprignmvc/</link>
+      <pubDate>Tue, 28 May 2019 11:49:48 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/sprignmvc/</guid>
+      <description> SpringMVC的基础 1.SpringMVC的运行原理 1.如果在web.xml中设置DispatcherServlet 的 $ &amp;lt;url-pattrrn&amp;gt;  为/时。当用户发起请求，请求一个控制器，首先会执行 DispatcherServlet.由DispatcherServlet 调用HandlerMapping的DefaultAnnotationHandlerMapping解析URL，解析后调用HandlerAdatper组件AnnotationMethodHandlerAdapter调用Controller中的 HandlerMethod.当 HandlerMethod 执行完成后会返回View,会被 ViewResovler 进行视图解析,解析后调用 jsp 对应的.class文件并运行，最终把运行.class 文件的结果响应给客户端.以上就是 springmvc 运行原理(给面试官说的) 2.SpringMVC中的重要组件 2.1.DispatcherServlet:前端控制器，接收所有请求（如果不配置/不包含jsp） 2.2.HandlerMapper:解析请求格式的，判断希望要执行那个具体的方法 2.3.HandlerAdapter:负责调用具体的方法 2.4.ViewResovler:视图解析器，解析结果，准备跳转到具体的物理视图 3.Spring容器和SpringMVC的关系 1.Spring容器和SpringMVC容器是父子关系，SpringMVC容器可以调用Spring容器的所有内容 4.跳转方式 4.1.默认的跳转方式为请求转发 4.2设置字符串的内容 4.2.1.添加 redirect：资源路径 重定向 4.2.2.添加forward：资源路径 或者省略forward：资源路径 是请求转发 </description>
+    </item>
+    
+    <item>
+      <title>使用hugo搭建个人博客</title>
+      <link>https://815090488.github.io/post/blog/</link>
+      <pubDate>Mon, 27 May 2019 19:12:32 +0800</pubDate>
+      
+      <guid>https://815090488.github.io/post/blog/</guid>
+      <description>如何使用Hugo搭建个人博客 创建步骤：（在CMD中操作） 安装hugo：&amp;lt;https://github.com/gohugoio/hugo/releases 安装git（使用git从github中拉取主题） 1.第一步：新建文件夹 $ hugo new site myblog  2.第二步：进入myblog目录下 $ cd myblog $ cd themes  3.第三步：在Hugo Themes网站上下载自己喜欢的主题 $ git clone https://github.com/syui/hugo-theme-air  4.第四步：将主题发布在本地 $ hugo server -t hugo-theme-air --buildDrafts  5.第五步：创建md格式文件 $ hugo new post/blog.md(书写博客) $ hugo --theme=hugo-theme-air --baseUrl=&amp;quot;https://(访问地址)&amp;quot; --buildDrafts  6.第六步：进入public文件夹 $ cd public $ git init $ git add *  7.第七步：提交 $ git commit -m &amp;quot;我的第一次提交&amp;quot;  8第八步：推送 $ git remote add origin https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

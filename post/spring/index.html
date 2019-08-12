@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>欢迎来到我的仓库</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://815090488.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring"/>
+<meta name="twitter:description" content="一、Spring Coer 1、Spring 框架控制反转（IOC）容器  IoC也称为依赖注入(DI)。它是一个过程，对象仅通过构造函数、工厂方法的参数或在从工厂方法构造或返回对象实例后在对象实例上设置的属性来定义它们的依赖关系(即与它们一起工作的其他对象)。然后，容器在创建bean时注入这些依赖项。从根本上说，这个过程是bean本身的逆(因此是名称、控制反转)，它通过使用类的直接构造或服务定位器模式等机制来控制其依赖项的实例化或位置。 org.springframework.beans和org.springframework.context包是SpringFramework的IoC容器的基础  2.集装箱概况（ Container Overview）  org.springframework.context.ApplicationContext接口表示SpringIoC容器，并负责实例化、配置和组装bean。容器通过读取配置元数据获取关于要实例化、配置和组装哪些对象的说明。  3、实例化容器 ApplicationContext context = new ClassPathXmlApplicationContext(&quot;services.xml&quot;, &quot;daos.xml&quot;);  4、使用JSR 330标准注释 从Spring3.0开始，Spring提供了对JSR-330标准注释(依赖注入)的支持。这些注释的扫描方式与Spring注释相同。要使用它们，您需要在类路径中拥有相关的JAR。
+&lt;dependency&gt; &lt;groupId&gt;javax.inject&lt;/groupId&gt; &lt;artifactId&gt;javax.inject&lt;/artifactId&gt; &lt;version&gt;1&lt;/version&gt; &lt;/dependency&gt;   依赖注入@Inject和@Named而不是@Autowired，你可以用@javax.inject.Inject`  import javax.inject.Inject; public class SimpleMovieLister { private MovieFinder movieFinder; @Inject public void setMovieFinder(MovieFinder movieFinder) { this.movieFinder = movieFinder; } public void listMovies() { this.movieFinder.findMovies(...); ... } }  import javax.inject.Inject; import javax.inject.Provider; public class SimpleMovieLister { private Provider&lt;MovieFinder&gt; movieFinder; @Inject public void setMovieFinder(Provider&lt;MovieFinder&gt; movieFinder) { this."/>
+
+    <meta property="og:title" content="Spring" />
+<meta property="og:description" content="一、Spring Coer 1、Spring 框架控制反转（IOC）容器  IoC也称为依赖注入(DI)。它是一个过程，对象仅通过构造函数、工厂方法的参数或在从工厂方法构造或返回对象实例后在对象实例上设置的属性来定义它们的依赖关系(即与它们一起工作的其他对象)。然后，容器在创建bean时注入这些依赖项。从根本上说，这个过程是bean本身的逆(因此是名称、控制反转)，它通过使用类的直接构造或服务定位器模式等机制来控制其依赖项的实例化或位置。 org.springframework.beans和org.springframework.context包是SpringFramework的IoC容器的基础  2.集装箱概况（ Container Overview）  org.springframework.context.ApplicationContext接口表示SpringIoC容器，并负责实例化、配置和组装bean。容器通过读取配置元数据获取关于要实例化、配置和组装哪些对象的说明。  3、实例化容器 ApplicationContext context = new ClassPathXmlApplicationContext(&quot;services.xml&quot;, &quot;daos.xml&quot;);  4、使用JSR 330标准注释 从Spring3.0开始，Spring提供了对JSR-330标准注释(依赖注入)的支持。这些注释的扫描方式与Spring注释相同。要使用它们，您需要在类路径中拥有相关的JAR。
+&lt;dependency&gt; &lt;groupId&gt;javax.inject&lt;/groupId&gt; &lt;artifactId&gt;javax.inject&lt;/artifactId&gt; &lt;version&gt;1&lt;/version&gt; &lt;/dependency&gt;   依赖注入@Inject和@Named而不是@Autowired，你可以用@javax.inject.Inject`  import javax.inject.Inject; public class SimpleMovieLister { private MovieFinder movieFinder; @Inject public void setMovieFinder(MovieFinder movieFinder) { this.movieFinder = movieFinder; } public void listMovies() { this.movieFinder.findMovies(...); ... } }  import javax.inject.Inject; import javax.inject.Provider; public class SimpleMovieLister { private Provider&lt;MovieFinder&gt; movieFinder; @Inject public void setMovieFinder(Provider&lt;MovieFinder&gt; movieFinder) { this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://815090488.github.io/post/spring/" />
+<meta property="article:published_time" content="2019-06-06T23:52:34&#43;08:00"/>
+<meta property="article:modified_time" content="2019-06-06T23:52:34&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://815090488.github.io/"><img style="box-shadow:0px 0px 50px -13px aqua;" class="app-header-avatar" src="/avatar.jpg"  /></a>
+      <h3>Welcome to my repository of knowledge</h3>
+      <p>欢迎来到我的知识仓库</p>
+			<div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Spring</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 6, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h1 id="一-spring-coer">一、Spring Coer</h1>
+
+<h4 id="1-spring-框架控制反转-ioc-容器">1、Spring 框架控制反转（IOC）容器</h4>
+
+<ol>
+<li>IoC也称为依赖注入(DI)。它是一个过程，对象仅通过构造函数、工厂方法的参数或在从工厂方法构造或返回对象实例后在对象实例上设置的属性来定义它们的依赖关系(即与它们一起工作的其他对象)。然后，容器在创建bean时注入这些依赖项。从根本上说，这个过程是bean本身的逆(因此是名称、控制反转)，它通过使用类的直接构造或服务定位器模式等机制来控制其依赖项的实例化或位置。</li>
+<li><code>org.springframework.beans</code>和<code>org.springframework.context</code>包是SpringFramework的IoC容器的基础</li>
+</ol>
+
+<h4 id="2-集装箱概况-container-overview">2.集装箱概况（ Container Overview）</h4>
+
+<ol>
+<li><code>org.springframework.context.ApplicationContext</code>接口表示SpringIoC容器，并负责实例化、配置和组装bean。容器通过读取配置元数据获取关于要实例化、配置和组装哪些对象的说明。</li>
+</ol>
+
+<h4 id="3-实例化容器">3、实例化容器</h4>
+
+<pre><code class="language-java">ApplicationContext context = new ClassPathXmlApplicationContext(&quot;services.xml&quot;, &quot;daos.xml&quot;);
+</code></pre>
+
+<h4 id="4-使用jsr-330标准注释">4、使用JSR 330标准注释</h4>
+
+<p>从Spring3.0开始，Spring提供了对JSR-330标准注释(依赖注入)的支持。这些注释的扫描方式与Spring注释相同。要使用它们，您需要在类路径中拥有相关的JAR。</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;javax.inject&lt;/groupId&gt;
+    &lt;artifactId&gt;javax.inject&lt;/artifactId&gt;
+    &lt;version&gt;1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<ol>
+<li>依赖注入<strong>@Inject<code>和</code>@Named</strong><code>而不是</code>@Autowired<code>，你可以用</code>@javax.inject.Inject`</li>
+</ol>
+
+<pre><code class="language-java">   import javax.inject.Inject;
+   
+   public class SimpleMovieLister {
+   
+       private MovieFinder movieFinder;
+   
+       @Inject
+       public void setMovieFinder(MovieFinder movieFinder) {
+           this.movieFinder = movieFinder;
+       }
+   
+       public void listMovies() {
+           this.movieFinder.findMovies(...);
+           ...
+       }
+   }
+</code></pre>
+
+<pre><code class="language-java">import javax.inject.Inject;
+import javax.inject.Provider;
+
+public class SimpleMovieLister {
+
+    private Provider&lt;MovieFinder&gt; movieFinder;
+
+    @Inject
+    public void setMovieFinder(Provider&lt;MovieFinder&gt; movieFinder) {
+        this.movieFinder = movieFinder;
+    }
+
+    public void listMovies() {
+        this.movieFinder.get().findMovies(...);
+        ...
+    }
+}
+</code></pre>
+
+<p>如果要为应该注入的依赖项使用限定名，则应使用<code>@Named</code>注释，如下例所示：</p>
+
+<pre><code class="language-java">import javax.inject.Inject;
+import javax.inject.Named;
+
+public class SimpleMovieLister {
+
+    private MovieFinder movieFinder;
+
+    @Inject
+    public void setMovieFinder(@Named(&quot;main&quot;) MovieFinder movieFinder) {
+        this.movieFinder = movieFinder;
+    }
+
+    // ...
+}
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

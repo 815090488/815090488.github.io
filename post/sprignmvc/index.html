@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>欢迎来到我的仓库</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://815090488.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SprigMVC"/>
+<meta name="twitter:description" content=" SpringMVC的基础 1.SpringMVC的运行原理 1.如果在web.xml中设置DispatcherServlet 的 $ &lt;url-pattrrn&gt;  为/时。当用户发起请求，请求一个控制器，首先会执行 DispatcherServlet.由DispatcherServlet 调用HandlerMapping的DefaultAnnotationHandlerMapping解析URL，解析后调用HandlerAdatper组件AnnotationMethodHandlerAdapter调用Controller中的 HandlerMethod.当 HandlerMethod 执行完成后会返回View,会被 ViewResovler 进行视图解析,解析后调用 jsp 对应的.class文件并运行，最终把运行.class 文件的结果响应给客户端.以上就是 springmvc 运行原理(给面试官说的) 2.SpringMVC中的重要组件 2.1.DispatcherServlet:前端控制器，接收所有请求（如果不配置/不包含jsp） 2.2.HandlerMapper:解析请求格式的，判断希望要执行那个具体的方法 2.3.HandlerAdapter:负责调用具体的方法 2.4.ViewResovler:视图解析器，解析结果，准备跳转到具体的物理视图 3.Spring容器和SpringMVC的关系 1.Spring容器和SpringMVC容器是父子关系，SpringMVC容器可以调用Spring容器的所有内容 4.跳转方式 4.1.默认的跳转方式为请求转发 4.2设置字符串的内容 4.2.1.添加 redirect：资源路径 重定向 4.2.2.添加forward：资源路径 或者省略forward：资源路径 是请求转发 "/>
+
+    <meta property="og:title" content="SprigMVC" />
+<meta property="og:description" content=" SpringMVC的基础 1.SpringMVC的运行原理 1.如果在web.xml中设置DispatcherServlet 的 $ &lt;url-pattrrn&gt;  为/时。当用户发起请求，请求一个控制器，首先会执行 DispatcherServlet.由DispatcherServlet 调用HandlerMapping的DefaultAnnotationHandlerMapping解析URL，解析后调用HandlerAdatper组件AnnotationMethodHandlerAdapter调用Controller中的 HandlerMethod.当 HandlerMethod 执行完成后会返回View,会被 ViewResovler 进行视图解析,解析后调用 jsp 对应的.class文件并运行，最终把运行.class 文件的结果响应给客户端.以上就是 springmvc 运行原理(给面试官说的) 2.SpringMVC中的重要组件 2.1.DispatcherServlet:前端控制器，接收所有请求（如果不配置/不包含jsp） 2.2.HandlerMapper:解析请求格式的，判断希望要执行那个具体的方法 2.3.HandlerAdapter:负责调用具体的方法 2.4.ViewResovler:视图解析器，解析结果，准备跳转到具体的物理视图 3.Spring容器和SpringMVC的关系 1.Spring容器和SpringMVC容器是父子关系，SpringMVC容器可以调用Spring容器的所有内容 4.跳转方式 4.1.默认的跳转方式为请求转发 4.2设置字符串的内容 4.2.1.添加 redirect：资源路径 重定向 4.2.2.添加forward：资源路径 或者省略forward：资源路径 是请求转发 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://815090488.github.io/post/sprignmvc/" />
+<meta property="article:published_time" content="2019-05-28T11:49:48&#43;08:00"/>
+<meta property="article:modified_time" content="2019-05-28T11:49:48&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://815090488.github.io/"><img style="box-shadow:0px 0px 50px -13px aqua;" class="app-header-avatar" src="/avatar.jpg"  /></a>
+      <h3>Welcome to my repository of knowledge</h3>
+      <p>欢迎来到我的知识仓库</p>
+			<div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">SprigMVC</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 28, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h1 id="springmvc的基础">SpringMVC的基础</h1>
+
+<h2 id="1-springmvc的运行原理">1.SpringMVC的运行原理</h2>
+
+<h5 id="1-如果在web-xml中设置dispatcherservlet-的">1.如果在web.xml中设置DispatcherServlet 的</h5>
+
+<pre><code>$ &lt;url-pattrrn&gt;
+</code></pre>
+
+<h5 id="为-时-当用户发起请求-请求一个控制器-首先会执行-dispatcherservlet-由dispatcherservlet-调用handlermapping的defaultannotationhandlermapping解析url-解析后调用handleradatper组件annotationmethodhandleradapter调用controller中的-handlermethod-当-handlermethod-执行完成后会返回view-会被-viewresovler-进行视图解析-解析后调用-jsp-对应的-class文件并运行-最终把运行-class-文件的结果响应给客户端-以上就是-springmvc-运行原理-给面试官说的">为/时。当用户发起请求，请求一个控制器，首先会执行 DispatcherServlet.由DispatcherServlet 调用HandlerMapping的DefaultAnnotationHandlerMapping解析URL，解析后调用HandlerAdatper组件AnnotationMethodHandlerAdapter调用Controller中的 HandlerMethod.当 HandlerMethod 执行完成后会返回View,会被 ViewResovler 进行视图解析,解析后调用 jsp 对应的.class文件并运行，最终把运行.class 文件的结果响应给客户端.以上就是 springmvc 运行原理(给面试官说的)</h5>
+
+<h2 id="2-springmvc中的重要组件">2.SpringMVC中的重要组件</h2>
+
+<h5 id="2-1-dispatcherservlet-前端控制器-接收所有请求-如果不配置-不包含jsp">2.1.DispatcherServlet:前端控制器，接收所有请求（如果不配置/不包含jsp）</h5>
+
+<h5 id="2-2-handlermapper-解析请求格式的-判断希望要执行那个具体的方法">2.2.HandlerMapper:解析请求格式的，判断希望要执行那个具体的方法</h5>
+
+<h5 id="2-3-handleradapter-负责调用具体的方法">2.3.HandlerAdapter:负责调用具体的方法</h5>
+
+<h5 id="2-4-viewresovler-视图解析器-解析结果-准备跳转到具体的物理视图">2.4.ViewResovler:视图解析器，解析结果，准备跳转到具体的物理视图</h5>
+
+<h2 id="3-spring容器和springmvc的关系">3.Spring容器和SpringMVC的关系</h2>
+
+<h5 id="1-spring容器和springmvc容器是父子关系-springmvc容器可以调用spring容器的所有内容">1.Spring容器和SpringMVC容器是父子关系，SpringMVC容器可以调用Spring容器的所有内容</h5>
+
+<h2 id="4-跳转方式">4.跳转方式</h2>
+
+<h5 id="4-1-默认的跳转方式为请求转发">4.1.默认的跳转方式为请求转发</h5>
+
+<h5 id="4-2设置字符串的内容">4.2设置字符串的内容</h5>
+
+<h6 id="4-2-1-添加-redirect-资源路径-重定向">4.2.1.添加 redirect：资源路径  重定向</h6>
+
+<h6 id="4-2-2-添加forward-资源路径-或者省略forward-资源路径-是请求转发">4.2.2.添加forward：资源路径 或者省略forward：资源路径 是请求转发</h6>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

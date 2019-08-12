@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>欢迎来到我的仓库</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://815090488.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java基础70问"/>
+<meta name="twitter:description" content="标识符：字母、数字、下划线（_）、美元符号组成，数字不能开头
+switch语句参数类型：int 、short、byte、char、string、枚举。
+1.Java的八种基本类型？ Long、int、short、byte、double、float、char、boolean
+基本数据类型自动转换 byte-&gt;short,char -&gt; int -&gt; long float -&gt; double int -&gt; float long -&gt; double 记住：小可转大，大转小会失去精度！！！  2.面向对象的三大特征？ 封装、继承、多态
+3.引用类型有哪几种？ 引用类型有四种
+强引用(StrongReference) 软引用(SoftReference) 弱引用(WeakReference) 虚引用(PhantomReference)  4.自动装箱和自动拆箱？ int Integer double Double float Float short Short byte Byte long Long  自动装箱：
+自动装箱的作用就是将基本数据类型转换成对应的类的类型的对象
+//在-128~127 之外的数 Integer i1 =200; Integer i2 =200; System.out.println(&quot;i1==i2: &quot;&#43;(i1==i2)); // 在-128~127 之内的数 Integer i3 =100; Integer i4 =100; System.out.println(&quot;i3==i4: &quot;&#43;(i3==i4)); 输出的结果是： i1==i2: false i3==i4: true equals() 比较的是两个对象的值（内容）是否相同。 &quot;==&quot; 比较的是两个对象的引用（内存地址）是否相同，也用来比较两个基本数据类型的变量值是否相等。  自动拆箱："/>
+
+    <meta property="og:title" content="Java基础70问" />
+<meta property="og:description" content="标识符：字母、数字、下划线（_）、美元符号组成，数字不能开头
+switch语句参数类型：int 、short、byte、char、string、枚举。
+1.Java的八种基本类型？ Long、int、short、byte、double、float、char、boolean
+基本数据类型自动转换 byte-&gt;short,char -&gt; int -&gt; long float -&gt; double int -&gt; float long -&gt; double 记住：小可转大，大转小会失去精度！！！  2.面向对象的三大特征？ 封装、继承、多态
+3.引用类型有哪几种？ 引用类型有四种
+强引用(StrongReference) 软引用(SoftReference) 弱引用(WeakReference) 虚引用(PhantomReference)  4.自动装箱和自动拆箱？ int Integer double Double float Float short Short byte Byte long Long  自动装箱：
+自动装箱的作用就是将基本数据类型转换成对应的类的类型的对象
+//在-128~127 之外的数 Integer i1 =200; Integer i2 =200; System.out.println(&quot;i1==i2: &quot;&#43;(i1==i2)); // 在-128~127 之内的数 Integer i3 =100; Integer i4 =100; System.out.println(&quot;i3==i4: &quot;&#43;(i3==i4)); 输出的结果是： i1==i2: false i3==i4: true equals() 比较的是两个对象的值（内容）是否相同。 &quot;==&quot; 比较的是两个对象的引用（内存地址）是否相同，也用来比较两个基本数据类型的变量值是否相等。  自动拆箱：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://815090488.github.io/post/java%E5%9F%BA%E7%A1%8070%E9%97%AE/" />
+<meta property="article:published_time" content="2019-07-30T20:39:46&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-30T20:39:46&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://815090488.github.io/"><img style="box-shadow:0px 0px 50px -13px aqua;" class="app-header-avatar" src="/avatar.jpg"  /></a>
+      <h3>Welcome to my repository of knowledge</h3>
+      <p>欢迎来到我的知识仓库</p>
+			<div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Java基础70问</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 30, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<p><strong>标识符：字母、数字、下划线（_）、美元符号组成，数字不能开头</strong></p>
+
+<p><strong>switch语句参数类型</strong>：int 、short、byte、char、string、枚举。</p>
+
+<h4 id="1-java的八种基本类型">1.Java的八种基本类型？</h4>
+
+<p>Long、int、short、byte、double、float、char、boolean</p>
+
+<p><img src="C:Users81509myblogcontentimagesv2-a4de2da2942089375382858919e3ae63_hd.png" alt="v2-a4de2da2942089375382858919e3ae63_hd" /></p>
+
+<pre><code class="language-java">基本数据类型自动转换 
+ byte-&gt;short,char -&gt; int -&gt; long       
+ float -&gt; double 
+ int -&gt; float 
+ long -&gt; double   
+ 记住：小可转大，大转小会失去精度！！！
+</code></pre>
+
+<h4 id="2-面向对象的三大特征">2.面向对象的三大特征？</h4>
+
+<p>封装、继承、多态</p>
+
+<h4 id="3-引用类型有哪几种">3.引用类型有哪几种？</h4>
+
+<p>引用类型有四种</p>
+
+<pre><code class="language-java">强引用(StrongReference)
+软引用(SoftReference)
+弱引用(WeakReference)
+虚引用(PhantomReference)
+</code></pre>
+
+<h4 id="4-自动装箱和自动拆箱">4.自动装箱和自动拆箱？</h4>
+
+<pre><code class="language-java">int Integer
+double Double
+float Float
+short Short
+byte Byte
+long Long
+</code></pre>
+
+<p><strong>自动装箱</strong>：</p>
+
+<p>自动装箱的作用就是将基本数据类型转换成对应的类的类型的对象</p>
+
+<pre><code class="language-java">//在-128~127 之外的数
+ Integer i1 =200;  
+ Integer i2 =200;          
+ System.out.println(&quot;i1==i2: &quot;+(i1==i2));                 
+ // 在-128~127 之内的数
+ Integer i3 =100;  
+ Integer i4 =100;  
+ System.out.println(&quot;i3==i4: &quot;+(i3==i4));
+ 　　 输出的结果是：
+    i1==i2: false
+    i3==i4: true
+
+equals() 比较的是两个对象的值（内容）是否相同。
+
+&quot;==&quot; 比较的是两个对象的引用（内存地址）是否相同，也用来比较两个基本数据类型的变量值是否相等。
+</code></pre>
+
+<p><strong>自动拆箱</strong>：</p>
+
+<p>自动拆箱的目的，就是要把原来的类的类型的对象转回成基本类型</p>
+
+<pre><code class="language-java">1 Integer i = 10; //装箱
+2  int t = i; //拆箱，实际上执行了 int t = i.intValue();
+</code></pre>
+
+<h4 id="5-jdk和jre关系">5.JDK和JRE关系？</h4>
+
+<p><strong>JRE(Java Runtime Enviroment)</strong> 是 Java 的运行环境。面向 Java 程序的使用者，而不是开发者</p>
+
+<p><strong>JDK</strong>(Java Development Kit) 又称 J2SDK(Java2 Software Development Kit)，是 <strong>Java 开发工具包</strong>，它提供了 Java 的开发环境。</p>
+
+<p><strong>JVM是java虚拟机</strong></p>
+
+<p><strong>JDK包含JRE，而JRE包 含JVM。</strong></p>
+
+<h4 id="6-你所了解的ide有哪些">6.你所了解的IDE有哪些？</h4>
+
+<pre><code>eclipse 
+myeclipse
+IntelliJ IDEA
+</code></pre>
+
+<h4 id="7-java开发及执行过程-用到哪些工具">7.Java开发及执行过程？用到哪些工具？</h4>
+
+<h4 id="8-break和continue区别">8.break和continue区别？</h4>
+
+<p><strong>1 break;</strong>
+while循环break是用于永久终止循环。即不执行本次循环中break后面的语句，直接跳出循环。break可以用在switch语句中
+<strong>2continue;</strong>
+while循环continue是用于终止本次循环。即本次循环中continue后面的代码不执行，进行下一次循环的入口判断。</p>
+
+<h4 id="9-循环有哪些-区别是什么">9.循环有哪些？区别是什么？</h4>
+
+<p>for循环、while循环、do&hellip;while循环</p>
+
+<p><strong>循环结构for语句的格式：</strong></p>
+
+<p>　　for(初始化表达式;条件表达式;循环后的操作表达式) {</p>
+
+<p>　　　　　循环体;</p>
+
+<p>　　　}</p>
+
+<p><strong>循环结构while语句的格式：</strong></p>
+
+<p>　　初始化语句;</p>
+
+<p>​    　　while(判断条件语句) {</p>
+
+<p>　　　　　　循环体语句;</p>
+
+<p>　　　　　　控制条件语句;</p>
+
+<p>　　　}</p>
+
+<p><strong>循环结构do&hellip;while语句的格式：</strong></p>
+
+<p>　　初始化语句;</p>
+
+<p>　　　　do {</p>
+
+<p>　　　　　　循环体语句;</p>
+
+<p>　　　　　　控制条件语句;</p>
+
+<p>　　　　}while(判断条件语句);</p>
+
+<p>总结:</p>
+
+<p>三种循环语句的区别:</p>
+
+<p>1.do&hellip;while循环至少执行一次循环体.　　</p>
+
+<p>2.而for,while循环必须先判断条件是否成立，然后决定是否执行循环体语句</p>
+
+<h4 id="10-解释你对封装的理解">10.解释你对封装的理解？</h4>
+
+<p>封装就是将类的信息隐藏在类内部、不允许外部程序直接访问，而是通过该类的方法实现对隐藏信息的操作和访问。（get/set方法）</p>
+
+<h4 id="11-解释下多态">11.解释下多态？</h4>
+
+<ul>
+<li><p>多态指的是对象的多种形态、</p></li>
+
+<li><p>多态有两种：</p>
+
+<ul>
+<li>引用多态：父类的引用可以指向本类的对象；父类的引用可以指向子类的对象</li>
+</ul>
+
+<pre><code class="language-java">//父类
+public class Animal{
+    public String name;
+    public int age;
+    public void run(){
+        System.out.println(&quot;动物都会跑&quot;)
+    }
+}
+    
+//子类
+public class cat extends Animal{
+        
+}
+    
+public class Test{
+    public static void main(String[] args){
+        Animal animal = new Animal();
+        Animal cat = new cat();
+    }
+}
+</code></pre>
+
+<ul>
+<li>方法多态：创建父类对象时。调用的方法为父类方法；创建子类对象时，调用的方法是子类重写的方法或继承自父类的方法</li>
+</ul>
+
+<pre><code class="language-java">//父类
+public class Animal{
+    public String name;
+    public int age;
+    public void run(){
+        System.out.println(&quot;动物都会跑&quot;)
+    }
+}
+    
+//子类
+public class cat extends Animal{
+    public void run(){
+        System.out.println(&quot;动物都会跑&quot;)
+    }
+}
+    
+public class Test{
+    public static void main(String[] args){
+        Animal animal = new Animal();
+        Animal cat = new cat();
+        animal.run();
+        cat.run();   
+    }
+}
+</code></pre></li>
+
+<li><p>继承是多态的实现基础</p></li>
+</ul>
+
+<h4 id="12-重写">12.重写？</h4>
+
+<ul>
+<li>两同：方法名和参数都相同</li>
+<li>两小：
+
+<ul>
+<li>子类返回类型小于等于父类方法返回类型</li>
+<li>子类抛出异常小于等于父类方法抛出异常</li>
+</ul></li>
+<li>一大：子类访问权限大于等于父类方法的访问权限</li>
+<li>父类的成员方法只能被它的子类重写</li>
+<li>声明为final的方法不能被重写</li>
+<li>明为static的方法不能被重写，但是能够被再次声明。（static和final的都不能被重写）</li>
+<li>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为private和final的方法。</li>
+<li>子类和父类不在同一个包中，那么子类只能够重写父类的声明为public和protected的非final方法。</li>
+<li>构造方法不能被重写。（构造方法属于static的）</li>
+<li>如果不能继承一个方法，则不能重写这个方法。</li>
+</ul>
+
+<h4 id="13-重载">13.重载？</h4>
+
+<ul>
+<li>方法名相同，但参数类型和个数可以不相同，返回值类型可以不相同</li>
+<li>方法重载就是在类中创建多个方法，方法名相同，参数列表不同，调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法，体现多态性；</li>
+<li>【构造方法的重载】：只需要看参数即可，如果想在一个构造方法中调用另一个构造方法，那么可以使用this()的方法调用，this()括号中的参数表示目标构造方法的参数，this()必须要作为构造方法的第一跳语句，换句话说，this()之前不能有任何可执行的代码。</li>
+</ul>
+
+<h4 id="14-构造方法">14.构造方法？</h4>
+
+<ul>
+<li><p>构造方法的名称必须与所属类的名称相同</p></li>
+
+<li><p>构造方法没有返回数据，但是也不需要在定义中前置void</p></li>
+
+<li><p>如果没有这个构造方法，系统会给予一个默认的构造方法，空构造</p></li>
+</ul>
+
+<h4 id="15-this作用及用法">15.this作用及用法？</h4>
+
+<ul>
+<li>this表示当前对象本身</li>
+<li>this表示当前对象的引用</li>
+<li>使用this调用重载的构造方法时必须在第一句</li>
+<li>this不能用于static方法中</li>
+</ul>
+
+<h4 id="16-super关键字">16.super关键字？</h4>
+
+<ul>
+<li>调用父类的构造方法、先有继承，再有super关键字的使用。必须在子类的构造方法中对父类的构造方法进行调用，不能在子类的其他方法中、调用父类的构造方法的代码，必须写在子类构造方法的第一行。</li>
+<li>调用父类的属性和一般方法、调用的是子类中覆写的、super.属性; // 调用父类的属性、super.方法();// 调用父类的方法</li>
+</ul>
+
+<h4 id="17-抽象类特点">17.抽象类特点？</h4>
+
+<ul>
+<li>抽象方法一定定义在抽象类中。抽象类中可以不定义抽象方法</li>
+<li>抽象方法和抽象类都必须被abstract关键字修饰</li>
+<li>抽象类不可以用new创建对象，因为调用抽象方法没意义</li>
+<li><em>抽象类中的方法要被使用，必须由子类复写其所有的抽象方法后，建立子类对象调用。</em></li>
+<li>如果子类只覆盖了部分抽象方法，那么该子类还是一个抽象类。</li>
+</ul>
+
+<h4 id="18-接口的特点-jdk8后有什么新特性">18.接口的特点？JDK8后有什么新特性？</h4>
+
+<ul>
+<li>接口使用interface修饰</li>
+<li>接口是常量和抽象方法的集合
+
+<ul>
+<li>常量：默认使用public static final 修饰</li>
+<li>方法：默认使用public abstract修饰</li>
+</ul></li>
+<li>在JDK1.8以后，接口还加入了了默认方法和静态方法</li>
+<li>接口不能实例化 ，不能new对象</li>
+<li>接口的实现类方法
+
+<ul>
+<li>如果一个类想要实现一个接口就必须实现接口中定义的所有抽象方法</li>
+<li>如果一个类不想实现接口中的抽象方法，就将实现类升级为接口</li>
+</ul></li>
+</ul>
+
+<h4 id="19-final-finalize和finally">19.final,finalize和finally</h4>
+
+<ul>
+<li><strong>final关键字</strong>
+
+<ul>
+<li>定义变量，包括静态的和非静态的</li>
+<li>定义方法的参数</li>
+<li>定义方法</li>
+<li>定义类</li>
+<li>final修饰的基本类型是不可改变的</li>
+</ul></li>
+<li>被final修饰的变量必须被初始化：
+
+<ul>
+<li>在定义的时候初始化</li>
+<li>final变量可以在初始化块中初始化，但不可以在静态初始化块中初始化</li>
+<li>静态final变量可以在静态初始化块中初始化，不可以在初始化块中初始化</li>
+<li>final变量还可以在类的构造方法中初始化，但是静态final变量不可以</li>
+</ul></li>
+</ul>
+
+<p><strong><em>finally语句</em></strong></p>
+
+<p>只能用在try/catch语句中，并且附带着一个语句块，表示这段语句最终总是被执行</p>
+
+<p><strong><em>finalize方法</em></strong></p>
+
+<p>finalize，它是一个方法，属于java.lang.Object类，finalize()方法是GC（garbage collector）运行机制的一部分</p>
+
+<h4 id="20-throw和throws区别">20.throw和throws区别？</h4>
+
+<ul>
+<li><p>throw是语句抛出一个异常，一般会用于程序出现某种逻辑时程序员主动抛出某种特定类型的异常</p></li>
+
+<li><p>throws是方法可能抛出异常的声明，当某个方法可能会抛出某种异常时用于throws 声明可能抛出的异常，然后交给上层调用它的方法程序处理</p></li>
+
+<li><p>throws出现在方法函数头；而throw出现在函数体。</p></li>
+
+<li><p>throws表示出现异常的一种可能性，并不一定会发生这些异常；throw则是抛出了异常，执行throw则一定抛出了某种异常对象。</p></li>
+</ul>
+
+<h4 id="21-非运行时异常和运行时异常区别">21.非运行时异常和运行时异常区别？</h4>
+
+<p>异常表示程序运行过程中可出现的非正常状态，运行时异常表示虚拟机的通常操作中可能遇到的异常，是一种常见运行错误。java编译器要求方法必须声明抛出可能发生的非运行时异常，但是并不要求声明跑出未被捕获的运行时异常。</p>
+
+<h4 id="22-静态块和非静态块-构造方法关系">22.静态块和非静态块，构造方法关系</h4>
+
+<p>执行顺序：</p>
+
+<p>1. 没有继承的执行顺序
+   - 实现自身的静态属性和静态代码块。
+   - 实现自身的非静态属性和非静态代码块。
+   - 执行自身的构造函数。
+2. 继承时的执行顺序
+   - 实现父类的公共静态属性和静态块级代码。
+   - 实现自身的静态属性和静态块级代码。
+   - 实现父类的非静态属性和非静态代码块。
+   - 执行父类的构造函数。
+   - 实现自身的非静态属性和非静态代码块。
+   - 执行自身的构造函数。</p>
+
+<h4 id="23-非静态内部类引用外部类对象的方式">23.非静态内部类引用外部类对象的方式？</h4>
+
+<p>方式</p>
+
+<ul>
+<li>外部类访问内部类：必须建立内部类的对象</li>
+<li>内部类访问外部类：内部类可以直接访问外部类的成员包括私有成员，因为外部类持有内部类的引用</li>
+</ul>
+
+<p>特例：内部类写在外部类的方法中(即局部变量的位置)</p>
+
+<p>　　1、内部来外部类均可定义变量/常量</p>
+
+<p>　　2、只能被final/abstract修饰</p>
+
+<p>　　3、只能访问被final/abstract修饰的变量</p>
+
+<p>　　4、可以直接访问外部类中的成员，因为还持有外部类的引用</p>
+
+<h4 id="24-java为什么可以跨平台">24.Java为什么可以跨平台？</h4>
+
+<p>JAVA程序不是直接在电脑上运行的，是在虚拟机上进行的，每个系统平台都是有自己的虚拟机（JVM），所以JAVA语言能跨平台。</p>
+
+<ul>
+<li>java代码不是直接运行在CPU上，而是运行在java虚机（简称JVM)上的。</li>
+
+<li><p>java是先把java文件编译成二进制字节码的class文件，jvm就解释执行class文件。</p></li>
+
+<li><p>就是因为java是运行在jvm上的，所以它的代码就能不经修改，就能在不同平台的jvm上运行(在linux上用linux的jvm，在windows上用windows的jvm）</p></li>
+</ul>
+
+<h4 id="25-类加载器有什么用">25.类加载器有什么用？</h4>
+
+<p><strong>JVM默认有三个类加载器（Java Classloader）</strong>：</p>
+
+<ul>
+<li>引导类加载器（bootstrap class loader），不继承自java.lang.ClassLoader，负责加载核心Java库，存储在<JAVA_HOME>/jre/lib目录中</li>
+<li>扩展类加载器（Extensions class loader）</li>
+<li>系统类加载器（system class loader），可以通过ClassLoader.getSystemClassLoader()来获取</li>
+<li>每个类装载器有一个父装载器（parent class loader）</li>
+</ul>
+
+<pre><code class="language-java">public class ClassLoaderTree { 
+
+    public static void main(String[] args) { 
+        ClassLoader loader = ClassLoaderTree.class.getClassLoader(); 
+        while (loader != null) { 
+            System.out.println(loader.toString()); 
+            loader = loader.getParent(); 
+        } 
+    } 
+ }
+</code></pre>
+
+<p>作用：加载class文件</p>
+
+<h4 id="26-collection和collections区别和关系">26.Collection和Collections区别和关系</h4>
+
+<ul>
+<li><p>Collection是集合类的上级的接口，，继承与他的接口主要有Set和List。</p></li>
+
+<li><p>Collections是针对集合类别的一个工具类，，他提供一系列静态方法对各种集合的搜索，排序，线程安全化等操作。此类不能实例化</p></li>
+</ul>
+
+<h4 id="27-集合类中的迭代器-iterator-是什么-作用">27.集合类中的迭代器（Iterator）是什么？作用？</h4>
+
+<ul>
+<li>迭代器：是一种设计模式，提供了一种方法，来对集合，容器进行遍历的方式，不需要关注底层数据结构和数据类型，来达到底层和上层遍历解耦的目的。</li>
+<li>集合要具有iterator 方法需要实现iterable接口，要自定义一个迭代器内部类，类需要实现Iterator接口；</li>
+</ul>
+
+<h4 id="28-list接口-set接口和map接口的区别">28.List接口、Set接口和Map接口的区别？</h4>
+
+<ul>
+<li><strong>List和Set接口自Collection（数组对象）接口，而Map不是继承的Collection接口</strong></li>
+</ul>
+
+<p><strong>List接口</strong>：(元素的插入是<strong>有序</strong>的（存入和取出的顺序一致），每个元素都有索引（角标），<strong>允许容器中的元素有重复</strong>。可以有null元素)</p>
+
+<ul>
+<li><strong>ArrayList:</strong>
+
+<ul>
+<li>针对数组包装</li>
+<li>非线程安全，性能更高</li>
+</ul></li>
+<li><strong>LinkedList:</strong>底层基于链表实现，链表内存是散乱的，每一个元素存储本身内存地址的同时还存储下一个元素的地址。链表增删快，查找慢</li>
+<li><strong>Vector:</strong>线程安全，性能相对较低</li>
+<li>基于Array的List（Vector，ArrayList）适合查询，而LinkedList（链表）适合添加，删除操作;</li>
+</ul>
+
+<p><strong>Set接口</strong>：( 不允许容器中的元素有重复。这个是List和Set最大的区别。元素是无序的（但是有可能有序）)、(Set接口有两个实现类：HashSet(底层由HashMap实现)，LinkedHashSet )</p>
+
+<ul>
+<li><strong>HashSet</strong>（底层是HashMap）
+
+<ul>
+<li>HashSet不存重复数据，如果是自定义java类，应该覆写hashCode和equals两个方法，先判断hashCode再判断equals，自定义规则。开发工具自动生成</li>
+</ul></li>
+<li><strong>TreeSet</strong>(SortedSet接口有一个实现类：TreeSet（底层由平衡二叉树实现）)
+
+<ul>
+<li>TreeSet也不存重复数据并且可以排序，判断对象是否相同以及排序依靠的是比较器比较</li>
+<li>TreeSet不依靠hashCode和equals方法。使用TreeSet保存的java类需要实现Comparable接口，不然运行时报错。</li>
+</ul></li>
+<li><strong>LinkedHashSet :</strong> 具有HashSet的查询速度，且内部使用链表维护元素的顺序(插入的次序)。于是在使用迭代器遍历Set时，结果会按元素插入的次序显示。</li>
+</ul>
+
+<p><strong>Map接口</strong>：(键值对方式出现)</p>
+
+<ul>
+<li><strong>HashMap</strong>
+
+<ul>
+<li>线程不安全，高效，支持null</li>
+</ul></li>
+<li><strong>HashTable</strong>
+
+<ul>
+<li>线程安全、低效，不支持null</li>
+</ul></li>
+<li><strong>LinkeHashMap</strong></li>
+</ul>
+
+<h4 id="29-进程和线程">29.进程和线程</h4>
+
+<ul>
+<li>进程：系统中正在运行的一个应用程序；程序一旦运行就是进程，进程的目的就是担当分配系统资源（CPU时间、内存等）的基本单位。</li>
+<li>线程：系统分配处理器时间资源的基本单元，或者说进程之内独立执行的一个单元执行流。</li>
+<li>进程——资源分配的最小单位，线程——程序执行的最小单位。</li>
+</ul>
+
+<p><strong>进程和线程的区别</strong>：</p>
+
+<ul>
+<li>一个线程只能属于一个进程，而一个进程可以有多个线程</li>
+<li>资源分配给进程，同一进程的所有线程共享该进程的所有资源。 同一进程中的多个线程共享代码段(代码和常量)，数据段(全局变量和静态变量)，扩展段(堆存储)。但是每个线程拥有自己的栈段，栈段又叫运行时段，用来存放所有局部变量和临时变量。</li>
+<li>处理机分给线程，即真正在处理机上运行的是线程。</li>
+<li>线程在执行过程中，需要协作同步。不同进程的线程间要利用消息通信的办法实现同步。</li>
+</ul>
+
+<h4 id="30-hashcode和equals在hashset中有什么作用">30.hashCode和equals在HashSet中有什么作用?</h4>
+
+<p>首先我们熟知HashSet集合中元素存储的特点：</p>
+
+<p>1）不允许元素重复；</p>
+
+<p>2）不会记录元素添加的先后顺序；</p>
+
+<p>3）HashSet中比较两个对象是否相同，要使用equals()方法，不能使用 ==；</p>
+
+<p>4）底层依然使用哈希表（散列）算法，其本质就是数组形式，采用此算法就为提高查询的效率；</p>
+
+<p>5）插入速度也比较快，但适合于少量元素插入操作；一旦所存储元素个数满足（size * loadFoctor &gt; size），哈希表就要扩容，此时操作速度极慢，性能就会降低！</p>
+
+<ul>
+<li>1）先判断两个对象的hashCode()方法返回值是否相同，即存储的位置；</li>
+<li>2）然后再判断两个对象的equals()方法返回值是否为true，即存储实际的对象值</li>
+<li>哈希码不同时，则必为不同的对象，重写hashCode()方法时，哈希码相同（可能出现重码现象），则根据euqals()方法判断是否新值覆盖旧值</li>
+</ul>
+
+<h4 id="31-arraylist和linkedlist区别">31.ArrayList和LinkedList区别？</h4>
+
+<ul>
+<li>ArrayList 和Vector是采用数组方式存储数据的,是根据索引来访问元素的，索引数据快插入数据慢</li>
+<li>LinkedList使用双向链表实现存储，按序号索引数据需要进行向前或向后遍历，插入数度较快</li>
+</ul>
+
+<h4 id="32-hashset和hashmap有关系么">32.HashSet和HashMap有关系么？</h4>
+
+<ul>
+<li><p>HashSet底层实际上是(key,value)类型的HashMap,而我们知道,HashSet的key是不能重复的,所以HashSet的值自然也是没有重复的.因为HashMap的key可以为null,所以HashSet的值可以为null</p></li>
+
+<li><p>HashSet在存储对象等数据时,为了去重,一般都会重写hashCode()和equals().</p>
+
+<ul>
+<li><p>equals()相等的两个对象他们的hashCode()肯定相等，也就是用equals()对比是绝对可靠的。</p></li>
+
+<li><p>hashCode()相等的两个对象他们的equals()不一定相等，也就是hashCode()不是绝对可靠的。</p></li>
+</ul></li>
+</ul>
+
+<h4 id="33-arraylist的动态增长机制是什么">33.ArrayList的动态增长机制是什么？</h4>
+
+<ul>
+<li>ArrayList底层采用Object类型的数组实现，当使用不带参数的构造方法生成ArrayList对象时， 实际上会在底层生成一个长度为10的Object类型数组。
+
+<ul>
+<li>首先，ArrayList定义了一个私有的未被序列化的数组elementData，用来存储ArrayList的对象列表（注意只定义未初始）：private transient Object[] elementData;</li>
+<li>其次，以指定初始容量（Capacity）或把指定的Collection转换为引用型数组后实例化elementData数组；如果没有指定，则预置初始容量为10进行实例化。把私有数组预先实例化，然后通过copyOf方法覆盖原数组，是实现自动改变ArrayList的大小(size)的关键</li>
+</ul></li>
+</ul>
+
+<h4 id="34-在实例化对象时-是先执行的构造方法还是属性">34.在实例化对象时，是先执行的构造方法还是属性?</h4>
+
+<p>先执行属性在执行构造方法</p>
+
+<pre><code class="language-jav">下面以person对象为例进行解释：
+
+Person person = new Person();
+
+1.因为new用到了Person.class，所以会先找到Person.class文件并加载到内存中（由虚拟机完成）；
+
+2.执行该类中的static代码块，（如果有的话），给Person.class类进行初始化；
+
+3.在堆内存中开辟内存空间，分配内存地址；
+
+4.在堆内存中建立对象的特有属性，并进行默认初始化。
+
+5.对属性进行显示初始化；
+
+6.对对象进行构造代码块初始化；
+
+7.对对象进行对应的构造函数初始化；
+
+8.将内存地址赋给栈内存中的变量。
+</code></pre>
+
+<h4 id="35-解释下你对java反射的认识">35.解释下你对Java反射的认识？</h4>
+
+<ul>
+<li><p>反射机制就是在程序的运行过程中被允许对程序本身进行操作，比如自我检查，进行装载，还可以获取类本身，类的所有成员变量和方法，类的对象，还可以在运行过程中动态的创建类的实例，通过实例来调用类的方法</p></li>
+
+<li><p>利用反射机制可以获取类对象（也就是我们前面介绍的类对象，获取类对象之后我们便获取了类的模板，可以对类进行一些操作），有以下三种方法：</p></li>
+</ul>
+
+<p>1.类名.class()</p>
+
+<p>2.对象名.getClass()</p>
+
+<p>3.Class.forName(具体的类名)</p>
+
+<pre><code class="language-jav">  //1.类名.class
+  		
+  		Class clz = User.class;
+  		System.out.println(clz);
+  		
+  		//2.对象名.getClass()
+  		
+  		Class clz1 = new User().getClass();	
+  		System.out.println(clz==clz1);
+  		
+  		//3.Class.forName()
+  		
+  		//Class clz2 = Class.forName(&quot;User&quot;);
+  		Class clz2 = Class.forName(&quot;cn.itcast_01.User&quot;);
+  		System.out.println(clz==clz2);
+</code></pre>
+
+<h4 id="36-怎么理解string的不可变性">36.怎么理解String的不可变性？</h4>
+
+<ul>
+<li><p>String实现依靠的是char[]</p></li>
+
+<li><p>在程序内部这个数组被声明为private的，同时是个final的。</p></li>
+
+<li><p>Private可以保证value数组不被调用者访问到，final可以确保数组的地址是不变的。</p></li>
+
+<li><p>声明数组为final的时仅仅可以保证数组的地址是不变的，并不能保证数组里面的值不变。</p></li>
+
+<li><p>总结：内部的value数组被声明为private，确保了value的值不会被外部程序改变。</p></li>
+
+<li><h5 id="string类被声明为final的-它的意义是什么呢">String类被声明为final的，它的意义是什么呢？</h5>
+
+<ul>
+<li>类被声明为final的时候，这个类是不可以为继承的，这样就不能修改这个类里面的方法实现。</li>
+<li>String的不可变性确保了线程安全。在并发场景下，对共享资源的写操作会引发静态条件，只有对资源进行写操作才引发资源状态的不一致，而不可变对象不可写，因此是线程安全的。</li>
+</ul></li>
+
+<li><h5 id="string不可变的原因">String不可变的原因：</h5>
+
+<ul>
+<li>（1） 类设计为final的，确保类不被继承，方法不被覆盖</li>
+<li>（2） 内部实现上用的是private final的数组</li>
+</ul></li>
+
+<li><p><strong>内部实现上避免改变原字符串：</strong></p></li>
+
+<li><p>（1） 任何对String的写操作都不是在原来的字符串上进行的修改，而是创建的新对象</p></li>
+
+<li><p><strong>好处</strong>：</p>
+
+<ul>
+<li>（1） 线程安全</li>
+<li>（2） 在使用String作为HashMap和HashSet的key时，可以确保键值唯一性</li>
+</ul></li>
+</ul>
+
+<h4 id="37-stringbuffer和stringbuilder区别">37.StringBuffer和StringBuilder区别？</h4>
+
+<ul>
+<li>StringBuffer和StringBuilder类都表示内容可以被修饰的字符串，StringBuilder是线程不安全的，运行效率高，如果一个字符串变量是在方法里面定义，这种情况只可能有一个线程访问它，不存在线程不安全的因素了，则用StringBuilder。如果要在类里面定义成员变量，并且这个类的实例对象会在多线程环境下使用，那么最好用StringBuffer。</li>
+</ul>
+
+<h4 id="38-vector和arraylist区别">38.Vector和ArrayList区别？</h4>
+
+<p>List接口下一共实现了三个类：ArrayList，Vector，LinkedList。LinkedList就不多说了，它一般主要用在保持数据的插入顺序的时候。ArrayList和Vector都是用数组实现的，主要有这么三个区别</p>
+
+<ul>
+<li>1、Vector是多线程安全的，而ArrayList不是，这个可以从源码中看出，Vector类中的方法很多有synchronized进行修饰，这样就导致了Vector在效率上无法与ArrayList相比；</li>
+<li>2、两个都是采用的线性连续空间存储元素，但是当空间不足的时候，两个类的增加方式是不同的，很多网友说Vector增加原来空间的一倍，ArrayList增加原来空间的50%，其实也差不多是这个意思，不过还有一点点问题可以从源码中看出，一会儿从源码中分析。</li>
+<li>3、Vector可以设置增长因子，而ArrayList不可以</li>
+</ul>
+
+<h4 id="39-hashmap和hashtable区别">39.HashMap和Hashtable区别？</h4>
+
+<ul>
+<li>HashMap和Hashtable都实现了Map 接口</li>
+<li>HashMap是非synchronized的，而Hashtable是synchronized的。这说明Hashtable是线程安全的，而且多个线程可以共享一个Hashtable；</li>
+<li>而HashMap如果没有正确的同步的话，是不能被多个线程所共享的。但是，Java 5中为我们提供了ConcurrentHashMap，它是Hashtable的替代，而且比Hashtable的扩展性更好。</li>
+<li>HashMap几乎可以等价于Hashtable，除了HashMap是非synchronized的，并可以接受null值（HashMap可以存在null的键值(key)和值(value),但是Hashtable是不可以的)。</li>
+<li>HashMap不能保证随着时间的推移Map中的元素次序是不变的。要保持元素顺序不变，除非是LinkedHashMap。</li>
+</ul>
+
+<h4 id="40-使用一层循环如何实现九九乘法表-写出代码">40.使用一层循环如何实现九九乘法表？写出代码</h4>
+
+<pre><code class="language-java">public class Test {
+    public static void main(String[] args) {
+        //循环控制实现输出九行
+        for (int i = 0, j = 0; i &lt; 10; j++) {
+            System.out.print(j + &quot;*&quot; + i + &quot;=&quot; + i * j + &quot;\t&quot;);
+            if (i == j) {
+                System.out.println();
+                j = 0;
+                i++;
+            }
+        }
+    }
+}
+</code></pre>
+
+<h4 id="41-序列化和反序列化的概念">41. 序列化和反序列化的概念？</h4>
+
+<ul>
+<li>序列化：把对象转换为字节序列的过程称为对象的序列化。</li>
+<li>反序列化：把字节序列恢复为对象的过程称为对象的反序列化。</li>
+<li>实现Serializable接口</li>
+</ul>
+
+<p><strong>好处</strong>：</p>
+
+<ul>
+<li>利用序列化实现远程的通信，即在网络上传输信息。</li>
+<li>可以实现数据的持久化，通过序列化可以把数据永久的保存到硬盘上。</li>
+</ul>
+
+<h4 id="42-基本流和包装流区别">42.基本流和包装流区别？</h4>
+
+<h4 id="43-字节流和字符流区别-哪一个流没有关闭和清空时-不会写入文件内容">43.字节流和字符流区别？哪一个流没有关闭和清空时，不会写入文件内容？</h4>
+
+<h4 id="44-datainputstream有什么特点-什么优势">44.DataInputStream有什么特点？什么优势?</h4>
+
+<h4 id="71-tcp和udp的区别-三次握手和四次挥手">71.TCP和UDP的区别，三次握手和四次挥手？</h4>
+
+<table>
+<thead>
+<tr>
+<th>tcp</th>
+<th>udp</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>面向连接</td>
+<td>面向无连接</td>
+</tr>
+
+<tr>
+<td>传输速度慢</td>
+<td>传输速度快</td>
+</tr>
+
+<tr>
+<td>传输可靠</td>
+<td>传输不可靠（容易丢包）</td>
+</tr>
+
+<tr>
+<td>面向字节流</td>
+<td>面向报文</td>
+</tr>
+
+<tr>
+<td>一般传输数据采用</td>
+<td>可以用于长视频（对可靠性要求不高的场景）</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>TCP的优点</strong>： 可靠，稳定 TCP的可靠体现在TCP在传递数据之前，会有<strong>三次握手</strong>来建立连接，而且在数据传递时，有确认、窗口、重传、拥塞控制机制，在数据传完后，还会断开连接用来节约系统资源。</p>
+
+<p><strong>TCP的缺点</strong>： <strong>慢，效率低，占用系统资源高</strong>，易被攻击 TCP在传递数据之前，要先建连接，这会消耗时间，而且在数据传递时，确认机制、重传机制、拥塞控制机制等都会消耗大量的时间，而且要在每台设备上维护所有的传输连接，事实上，每个连接都会占用系统的CPU、内存等硬件资源。 而且，因为TCP有确认机制、三次握手机制，这些也导致TCP容易被人利用，实现DOS、DDOS、CC等攻击。</p>
+
+<p><strong>UDP的优点</strong>： <strong>快，比TCP稍安全 UDP没有TCP的握手、确认、窗口、重传、拥塞控制等机制</strong>，UDP是一个无状态的传输协议，所以它在传递数据时非常快。没有TCP的这些机制，UDP较TCP被攻击者利用的漏洞就要少一些。但UDP也是无法避免攻击的，比如：UDP Flood攻击……</p>
+
+<p><strong>UDP的缺点</strong>： 不可靠，不稳定 因为UDP没有TCP那些可靠的机制，在数据传递时，如果网络质量不好，就会很容易丢包</p>
+
+<ul>
+<li><strong>为什么要三次握手？</strong>
+
+<ul>
+<li>三次握手的目的是建立可靠的通信信道，说到通讯，简单来说就是数据的发送与接收，而三次握手最主要的目的就是双方确认自己与对方的发送与接收机能正常。</li>
+<li><strong>第一次握手,client:你准备好了吗?</strong></li>
+<li><strong>第二次握手,server: 我准备好了,你呢?</strong></li>
+<li><strong>第三次握手,client: 我也准备好了.我们开始吧!</strong></li>
+<li>核心思想就是,客户端和服务器分别确认对方是否准备好建立连接,并且每一次的确认信息都要得到对方的回应,两次确认和两次回应本应该是四次,但是第二次握手时,服务器将发出的确认信息和对客户端的回应做成一条信息发送了,所以就是三次握手.</li>
+</ul></li>
+<li>为什么要四次挥手？
+
+<ul>
+<li>根本原因是，一方发送FIN只表示自己发完了所有要发的数据，但还允许对方继续把没发完的数据发过来。</li>
+<li><strong>第一次挥手,client:我说完了</strong></li>
+<li><strong>第二次挥手,server:我知道了(但此时server可能还有话要说)</strong></li>
+<li><strong>第三次挥手,server:我也说完了</strong></li>
+<li><strong>第四次挥手,client:我知道了,(双方挂了电话)</strong></li>
+</ul></li>
+</ul>
+
+<h4 id="72-常见的网络协议有">72.常见的网络协议有？</h4>
+
+<ul>
+<li><p><strong>TCP/IP协议、UDP协议、HTTP协议、FTP协议、Telnet协议、SMTP协议、NFS协议等。</strong></p></li>
+
+<li><p><strong>TCP/IP 协议</strong></p>
+
+<ul>
+<li>传输控制协议/因特网互联协议，又名网络通讯协议，是Internet最基本的协议、Internet国际互联网络的基础，由网络层的IP协议和传输层的TCP协议组成。</li>
+</ul></li>
+
+<li><p><strong>IP</strong></p></li>
+
+<li><p>IP层接收由更低层（网络接口层例如以太网设备驱动程序）发来的数据包，并把该数据包发送到更高层&mdash;TCP或UDP层；相反，IP层也把从TCP或UDP层接收来的数据包传送到更低层。IP数据包是不可靠的，因为IP并没有做任何事情来确认数据包是否按顺序发送的或者有没有被破坏，IP数据包中含有发送它的主机的地址（源地址）和接收它的主机的地址（目的地址）</p></li>
+
+<li><h3 id="tcp">TCP</h3></li>
+</ul>
+
+<p>TCP是面向连接的通信协议，通过三次握手建立连接，通讯完成时要拆除连接，由于TCP是面向连接的所以只能用于端到端的通讯。</p>
+
+<ul>
+<li><p><strong>UDP 协议</strong></p></li>
+
+<li><p>UDP是面向无连接的通讯协议，UDP数据包括目的端口号和源端口号信息，由于通讯不需要连接，所以可以实现广播发送。</p></li>
+
+<li><p><strong>FTP 协议</strong></p></li>
+
+<li><p>FTP协议：文件传输协议。</p></li>
+
+<li><p><strong>Telnet 协议</strong></p>
+
+<ul>
+<li>Telnet协议（远程登录），是 TCP/IP 协议族中应用最广泛的协议，是Internet远程登录服务的标准协议和主要方式。Telnet协议的目的是提供一个相对通用的，双向的，面向八位字节的通信方法，允许界面终端设备和面向终端的过程能通过一个标准过程进行互相交互。应用Telnet协议能够把本地用户所使用的计算机变成远程主机系统的一个终端。
+
+<br /></li>
+</ul></li>
+
+<li><p>SMTP 协议</p></li>
+
+<li><p>SMTP协议：简单邮件传输协议，是一个相对简单的基于文本的协议。在其之上指定了一条消息的一个或多个接收者（在大多数情况下被确认是存在的），然后消息文本会被传输。</p></li>
+
+<li><p>NFS协议</p>
+
+<ul>
+<li>NFS，即网络文件系统，是一种用于文件共享的协议，允许一个系统在网络上与它人共享目录和文件。通过使用NFS，用户和程序可以像访问本地文件一样访问远端系统上的文件。</li>
+</ul></li>
+</ul>
+
+<h4 id="73-cookie和session">73.cookie和session</h4>
+
+<ul>
+<li><p>session是一个会话链接机制，其实是一种临时cookie可以让浏览器和服务器交互，断开后不能重新建立</p></li>
+
+<li><p>cookie数据保存在客户端，session数据保存在服务端，考虑到安全使用seesion</p></li>
+
+<li><p>session会在一定时间内保存在服务器上，当访问增多，会比较占用服务器性能，考虑到减轻服务器性能方面,应当使用cookie.</p></li>
+</ul>
+
+<h4 id="74-for循环和foreach循环">74.for循环和foreach循环</h4>
+
+<p>foreach循环是for循环的加强版，foreach循环效率比for循环效率高</p>
+
+<h4 id="75-创建对象的四种方法">75.创建对象的四种方法</h4>
+
+<ul>
+<li>new</li>
+<li>反序列化</li>
+<li>反射</li>
+<li>克隆</li>
+</ul>
+
+<h4 id="76-jvm模型">76.JVM模型</h4>
+
+<p>JVM模型一般分为4大部分</p>
+
+<p><img src="C:Users81509myblogcontentimagesJVM模型.jpg" alt="JVM模型" /></p>
+
+<ul>
+<li><p><strong>类加载器（ClassLoader）</strong></p>
+
+<ul>
+<li>在JVM启动或运行时加载需要的class文件到JVM中</li>
+</ul></li>
+
+<li><p><strong>内存区（也叫运行时数据区）</strong></p>
+
+<ul>
+<li><p>JVM运行的时候所分配的区域，内存区可以划分为以下几个部分：</p></li>
+
+<li><p>a、方法区</p></li>
+</ul>
+
+<p>用于存放类结构等信息的地方，主要包括常量池、静态变量、构造函数等；</p>
+
+<ul>
+<li><p>b、Java栈</p>
+
+<pre><code>  Java栈总是与线程关联在一起，每创建一个线程时，就会为这个线程创建一个对应的java栈，每运行一个方法就会创建一个栈帧，用于存放对应的局部变量、操作栈和方法返回值等。每一个方法从调用到完成的过程，就对应一个栈帧在Java栈中的入栈与出栈的过程；所有Java栈是线程所私有的；
+</code></pre></li>
+
+<li><p>c、Java堆</p>
+
+<pre><code>  存储Java实例和对象的地方；这里是GC的主要运作区域；Java栈和Java堆都是被所有线程共享的；
+
+  GC的两种算法：引用计数法、可达性算法；
+</code></pre></li>
+
+<li><p>d、本地线程栈</p>
+
+<pre><code>  和Java栈的作用差不都，只不过是为了JVM调用本地方法服务的；
+</code></pre></li>
+
+<li><p>e、程序计数器</p>
+
+<pre><code>  用于保存当前线程执行的内存地址；由于JVM是多线程的（多个线程轮流切换），为了保证线程切换回来后，还能恢复到原先状态，就需要一个独立的计数器，来记录之前中断的地方，因此程序计数器也是线程私有的；
+</code></pre></li>
+</ul></li>
+
+<li><p><strong>3、执行引擎</strong></p></li>
+</ul>
+
+<p>​         执行class文件中的字节码指令；</p>
+
+<ul>
+<li><strong>4、本地库</strong></li>
+</ul>
+
+<p>​         主要调用C或者C++实现的本地方法及返回结果；</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
