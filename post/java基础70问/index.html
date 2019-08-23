@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="John Doe" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://815090488.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="https://815090488.giithub.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -31,7 +31,7 @@ switch语句参数类型：int 、short、byte、char、string、枚举。
 自动装箱的作用就是将基本数据类型转换成对应的类的类型的对象
 //在-128~127 之外的数 Integer i1 =200; Integer i2 =200; System.out.println(&quot;i1==i2: &quot;&#43;(i1==i2)); // 在-128~127 之内的数 Integer i3 =100; Integer i4 =100; System.out.println(&quot;i3==i4: &quot;&#43;(i3==i4)); 输出的结果是： i1==i2: false i3==i4: true equals() 比较的是两个对象的值（内容）是否相同。 &quot;==&quot; 比较的是两个对象的引用（内存地址）是否相同，也用来比较两个基本数据类型的变量值是否相等。  自动拆箱：" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://815090488.github.io/post/java%E5%9F%BA%E7%A1%8070%E9%97%AE/" />
+<meta property="og:url" content="https://815090488.giithub.io/post/java%E5%9F%BA%E7%A1%8070%E9%97%AE/" />
 <meta property="article:published_time" content="2019-07-30T20:39:46&#43;08:00"/>
 <meta property="article:modified_time" content="2019-07-30T20:39:46&#43;08:00"/>
 
@@ -39,7 +39,7 @@ switch语句参数类型：int 、short、byte、char、string、枚举。
   </head>
   <body>
     <header class="app-header">
-      <a href="https://815090488.github.io/"><img style="box-shadow:0px 0px 50px -13px aqua;" class="app-header-avatar" src="/avatar.jpg"  /></a>
+      <a href="https://815090488.giithub.io/"><img style="box-shadow:0px 0px 50px -13px aqua;" class="app-header-avatar" src="/avatar.jpg"  /></a>
       <h3>Welcome to my repository of knowledge</h3>
       <p>欢迎来到我的知识仓库</p>
 			<div class="app-header-social">
@@ -64,7 +64,7 @@ switch语句参数类型：int 、short、byte、char、string、枚举。
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          4 min read
+          7 min read
         </div></div>
     </header>
     <div class="post-content">
@@ -676,6 +676,50 @@ Person person = new Person();
   		System.out.println(clz==clz2);
 </code></pre>
 
+<pre><code class="language-txt">  反射 (Reflection) 是 Java 的特征之一，它允许运行中的Java程序获取自身的信息，并且可以操作类或对象的内部属性。
+  反射的核心是JVM 在运行时才动态加载类或调用方法/访问属性，它不需要事先（写代码的时候或编译期）知道运行对象是谁。
+  
+  Java 反射主要提供以下功能：
+  在运行时判断任意一个对象所属的类；
+  在运行时构造任意一个类的对象；
+  在运行时判断任意一个类所具有的成员变量和方法（通过反射甚至可以调用private方法）；
+  在运行时调用任意一个对象的方法
+  重点：是运行时而不是编译时
+  
+  反射的基本运用
+  1、获得 Class 对象
+  方法有三种：
+  (1) 使用 Class 类的 forName 静态方法:Class.forName(driver);
+  (2)直接获取某一个对象的 class，比如Class&lt;?&gt; klass = int.class;
+  Class&lt;?&gt; classInt = Integer.TYPE;
+  (3)调用某个对象的 getClass() 方法，比如:StringBuilder str = new StringBuilder(&quot;123&quot;);
+  Class&lt;?&gt; klass = str.getClass();
+  2、判断是否为某个类的实例
+  一般地，我们用 instanceof 关键字来判断是否为某个类的实例。同时我们也可以借助反射中 Class 对象的 isInstance() 方法来判断是否为某个类的实例，它是一个 native 方法：public native boolean isInstance(Object obj);
+  3.创建实例
+  通过反射来生成对象主要有两种方式。
+  使用Class对象的newInstance()方法来创建Class对象对应类的实例。
+  先通过Class对象获取指定的Constructor对象，再调用Constructor对象的newInstance()方法来创建实例。这种方法可以用指定的构造器构造类的实例。
+  4.获取方法
+  获取某个Class对象的方法集合，主要有以下几个方法：
+  getDeclaredMethods 方法返回类或接口声明的所有方法，包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。
+  getMethods 方法返回某个类的所有公用（public）方法，包括其继承类的公用方法。
+  getMethod 方法返回一个特定的方法，其中第一个参数为方法名称，后面的参数为方法的参数对应Class的对象。
+  5、获取构造器信息
+  获取类构造器的用法与上述获取方法的用法类似。主要是通过Class类的getConstructor方法得到Constructor类的一个实例
+  6、获取类的成员变量（字段）信息
+  主要是这几个方法，在此不再赘述：
+  getFiled：访问公有的成员变量
+  getDeclaredField：所有已声明的成员变量，但不能得到其父类的成员变量
+  getFileds 和 getDeclaredFields 方法用法同上（参照 Method）。
+  7.调用方法
+  当我们从类中获取了一个方法后，我们就可以用 invoke() 方法来调用这个方法
+  8.用反射创建数组
+  数组在Java里是比较特殊的一种类型，它可以赋值给一个Object Reference.
+  Array类为java.lang.reflect.Array类。我们通过Array.newInstance()创建数组对象.
+  
+</code></pre>
+
 <h4 id="36-怎么理解string的不可变性">36.怎么理解String的不可变性？</h4>
 
 <ul>
@@ -777,7 +821,480 @@ Person person = new Person();
 
 <h4 id="43-字节流和字符流区别-哪一个流没有关闭和清空时-不会写入文件内容">43.字节流和字符流区别？哪一个流没有关闭和清空时，不会写入文件内容？</h4>
 
+<p>Java中字节流与字符流的区别</p>
+
+<p>1、定义</p>
+
+<ul>
+<li>字节流是一种执行8位字节输入和输出的机制，基本单元为字节；而字符流是Java中执行16位Unicode输入和输出操作的机制，基本单元为Unicode码元。</li>
+</ul>
+
+<p>2、结尾</p>
+
+<ul>
+<li>字节流以stream结尾；而，字符流以reader和writer结尾</li>
+</ul>
+
+<p>3、处理方式</p>
+
+<ul>
+<li>字节流是最基本的，采用ASCII编码；它通常用于处理二进制数据，它是按字节来处理的，实际上它可以处理任意类型的数据，但它不支持直接写入或读取Unicode码元。</li>
+<li>字符流采用Unicode编码，它是按虚拟机的encode来处理，也就是要进行字符集的转化；它通常处理文本数据，它支持写入及读取Unicode码元。</li>
+</ul>
+
+<p>4、缓冲区</p>
+
+<ul>
+<li>字节流默认不使用缓冲区；字符流使用缓冲区。</li>
+</ul>
+
 <h4 id="44-datainputstream有什么特点-什么优势">44.DataInputStream有什么特点？什么优势?</h4>
+
+<p>特点：</p>
+
+<p>数据输入流允许应用程序以与机器无关方式从底层输入流中读取基本Java数据类型。</p>
+
+<p>下面的构造方法用来创建数据输入流对象。</p>
+
+<pre><code>DataInputStream dis = new DataInputStream（InputStream in）;
+</code></pre>
+
+<p>另一种创建方式是接收一个字节数组，和两个整形变量off，len，off表示第一个读取的字节，len表示读取字节的长度。</p>
+
+<p>序号    方法描述<br />
+  1     public final int read（byte [] r，int off，int len）抛出IOException 从所包含的输入流中将len个字节读入一个字节数组中。如果len为-1，则返回已读字节数。
+  2     public final int read（byte [] b）抛出IOException 从所包含的输入流中读取一定数量的字节，并将它们存储到缓冲区数组b中。
+  3     public final Boolean readBooolean（）抛出IOException，<strong>public final byte readByte（）抛出IOException，public final short readShort（）抛出IOExceptionpublic final Int readInt（）抛出IOException</strong>从输入流中读取字节，返回输入流中两个字节作为对应的基本数据类型返回值。
+  4     public String readLine（）抛出IOException 从输入流中读取下一文本行。</p>
+
+<h4 id="45-为防止忘记手动关闭流-可以使用什么结构来创建流">45.为防止忘记手动关闭流，可以使用什么结构来创建流？</h4>
+
+<h4 id="46-接口比抽象类的优势在哪里">46.接口比抽象类的优势在哪里？</h4>
+
+<ul>
+<li>1、接口中的所有方法都是抽象方法，可以为用户提供模板</li>
+<li>2.接口可以多实现，但是抽象类智能单继承</li>
+</ul>
+
+<h4 id="47-xml和html区别">47.XML和HTML区别？</h4>
+
+<p>什么是XML、HTML？
+   XML:可扩展标记语言，标准通用标记语言的子集，是一种用于标记电子文件使其具有结构性的标记语言。</p>
+
+<p>HTML:超文本标记语言,就是指页面内可以包 含图片、链接，甚至音乐、程序等非文字元素。超文本标记语言的结构包括“头”部分（英语：Head）、和“主体”部分（英语：Body）， 其中“头”部提供关于网页的信息，“主体”部分提供网页的具体内容。</p>
+
+<p>不同之处：</p>
+
+<p>语法有所不同。XML语法比较严谨而HTML语法比较松散。
+用途不同。XML主要用于数据格式化存储而HTML主要用于网页的编辑。</p>
+
+<p>区别：</p>
+
+<p>html是一种基本的web网页设计语言，xhtml是一个基于XML的置标语言。</p>
+
+<p>最主要的不同:</p>
+
+<p>XHTML元素必须正确的被嵌套，元素必须关闭，标签必须小写，必须有根元素。</p>
+
+<h4 id="48-xml解析可以有哪几种">48.XML解析可以有哪几种？</h4>
+
+<p>1.DOM解析： DOM的全称是Document Object Model，也即文档对象模型。在应用程序中，基于DOM的XML分析器将一个XML文档转换成一个对象模型的集合（通常称DOM树），应用程序正是通过对这个对象模型的操作，来实现对XML文档数据的操作。通过DOM接口，应用程序可以在任何时候访问XML文档中的任何一部分数据，因此，这种利用DOM接口的机制也被称作随机访问机制。</p>
+
+<p>2.SAX解析：SAX的全称是Simple APIs for XML，也即XML简单应用程序接口。与DOM不同，SAX提供的访问模式是一种顺序模式，这是一种快速读写XML数据的方式。当使用SAX分析器对XML文档进行分析时，会触发一系列事件，并激活相应的事件处理函数，应用程序通过这些事件处理函数实现对XML文档的访问，因而SAX接口也被称作事件驱动接口。</p>
+
+<p>3.JDOM解析：JDOM采用了Java中的Collection架构来封装集合，是Java爱好者更加熟悉的模式</p>
+
+<p>4.DOM4J解析：xml解析器一次性把整个xml文档加载进内存，然后在内存中构建一颗Document的对象树，通过Document对象，得到树上的节点对象，通过节点对象访问（操作）到xml文档的内容…</p>
+
+<h4 id="49-switch语句中的表达式类型可以是哪几种">49.switch语句中的表达式类型可以是哪几种？</h4>
+
+<p><strong>switch语句参数类型</strong>：int 、short、byte、char、string、枚举。</p>
+
+<h4 id="50-接口是可以继承及多继承">50.接口是可以继承及多继承？</h4>
+
+<p>java中只有单继承</p>
+
+<h4 id="51-static关键字">51.static关键字</h4>
+
+<p>1、静态变量（属于class本身，跟具体的实例没有关系，只会随着jvm退出而退出）
+2、静态方法（比如常用的工具类，可以直接调用而不用具体的实例）
+3、静态代码块（比如static｛｝，跟直接的静态变量类似，同一个变量出现在多个静态代码块，最终结果以最后一次的结果为准）
+4、静态内部类（可以实现外部共享静态内部类，静态内部类与外部无关，可以理解为一个单独的静态类，独立的静态资源。外部类.内部类方便引用和提高可读性）</p>
+
+<p>5、静态导入（比如类上部分的import ***，可以具体到某个包*包含所有）</p>
+
+<h4 id="52-垃圾回收器启动时间及手动关闭方法">52.垃圾回收器启动时间及手动关闭方法？</h4>
+
+<h4 id="53-在使用try-catch有多个catch时-要注意什么问题">53.在使用try-catch有多个catch时，要注意什么问题？</h4>
+
+<ul>
+<li>当使用多个 catch 语句捕获多个异常时， Java 规定捕获 Exception 的 catch 语句必须排在最后</li>
+<li>父类在子类之后</li>
+</ul>
+
+<h4 id="54-什么是守护线程-有什么特点">54.什么是守护线程？有什么特点？</h4>
+
+<ul>
+<li>1.<strong>守护线程</strong>（例如垃圾回收线程：<strong>gc线程</strong>）</li>
+<li>2.<strong>非守护线程</strong>（用户线程：<strong>用户线程</strong>即我们手动创建的线程）</li>
+<li><strong>守护线程与非守护线程的区别</strong>
+
+<ul>
+<li>1.<strong>守护线程</strong>
+有一个特征，例如当<strong>主线程</strong>运行的时候，<strong>垃圾回收线程</strong>一起运行。
+当<strong>主线程</strong>销毁，会和<strong>主线程</strong>一起销毁。</li>
+<li>2.<strong>非守护线程</strong>
+如果<strong>主线程</strong>销毁，<strong>用户线程</strong>继续运行且互不影响。</li>
+</ul></li>
+<li><strong>当主线程销毁停止，非守护线程（用户线程）并没有结束，而是一直在执行，与主线程互不影响。</strong></li>
+</ul>
+
+<h4 id="55-sleep和wait的区别">55.sleep和wait的区别？</h4>
+
+<ul>
+<li>sleep()是Thread类中的方法，而wait（）是Object类中的方法</li>
+<li>调用sleep（）执行时，线程不会释放对象锁，而wait()会释放对象锁，只有针对notify（）方法或者notifyAll()之后线程才进入对象锁定池准备</li>
+<li>sleep可以在任何地方使用，而wait只能在同步方法或者同步块中使用</li>
+<li>sleep需要捕获异常，而wait()不需要捕获异常</li>
+<li>sleep是静态方法，wait是实例方法</li>
+</ul>
+
+<h4 id="56-和-区别">56.&amp;和&amp;&amp;区别？</h4>
+
+<ul>
+<li>&amp;是运算符，&amp;&amp;是逻辑运算符</li>
+<li>&amp;&amp;还有短路功能，只要一边表达式为false，则另一边不会再进行比较</li>
+<li>&amp;也可以比较，但是他比较两边，而且他是位运算，如果两边都不是Boolean类型的数据则按位与运算。
+
+<ul>
+<li>比如：两个字节：如果相对应位都是1，则结果为1，否则为0</li>
+</ul></li>
+</ul>
+
+<h4 id="57-比较器compareable-和-comparator的区别">57.比较器Compareable 和 Comparator的区别？</h4>
+
+<ul>
+<li><p>Comparable和Comparator都是实现集合中元素的比较，排序的两种比较器接口，</p></li>
+
+<li><p>Comparable是在集合内部定义的实现的排序，称为内比较器，</p></li>
+
+<li><p>Comparator是在集合外部实现排序，称为外比较器如果想实现排序，就需要在集合外定义Comparator接口的方法或者集合内实现Compaarable接口的方法</p></li>
+
+<li><p><strong>Comparable 自然排序</strong></p></li>
+</ul>
+
+<p>Comparable 是排序接口。</p>
+
+<p>若一个类实现了Comparable接口，就意味着“<strong>该类支持排序</strong>”。 即然实现Comparable接口的类支持排序，假设现在存在“实现Comparable接口的类的对象的List列表(或数组)”，则该List列表(或数组)可以通过 Collections.sort（或 Arrays.sort）进行排序。</p>
+
+<p>此外，“实现Comparable接口的类的对象”可以用作“有序映射(如TreeMap)”中的键或“有序集合(TreeSet)”中的元素，而不需要指定比较器</p>
+
+<p><strong>Comparable 定义</strong></p>
+
+<p>Comparable 接口仅仅只包括一个函数，它的定义如下</p>
+
+<pre><code class="language-java">  package java.lang;
+  import java.util.*;
+  
+  public interface Comparable&lt;T&gt; {
+      public int compareTo(T o);
+  }123456
+</code></pre>
+
+<p>Comparable 可以让实现它的类的对象进行比较，具体的比较规则是按照 compareTo 方法中的规则进行。这种顺序称为 <strong>自然顺序</strong>。</p>
+
+<p>compareTo 方法的返回值有三种情况：</p>
+
+<ul>
+<li>e1.compareTo(e2) &gt; 0 即 e1 &gt; e2</li>
+<li>e1.compareTo(e2) = 0 即 e1 = e2</li>
+<li>e1.compareTo(e2) &lt; 0 即 e1 &lt; e2</li>
+</ul>
+
+<p>注意：</p>
+
+<blockquote>
+<p>1.由于 null 不是一个类，也不是一个对象，因此在重写 compareTo 方法时应该注意 e.compareTo(null) 的情况，即使 e.equals(null) 返回 false，compareTo 方法也应该主动抛出一个空指针异常 NullPointerException。</p>
+
+<p>2.Comparable 实现类重写 compareTo 方法时一般要求 e1.compareTo(e2) == 0 的结果要和 e1.equals(e2) 一致。这样将来使用 SortedSet 等<strong>根据类的自然排序进行排序</strong>的集合容器时可以保证保存的数据的顺序和想象中一致。</p>
+</blockquote>
+
+<ul>
+<li><p><strong>Comparator定制排序</strong></p></li>
+
+<li><p>Comparator 则是在外部制定排序规则，然后作为排序策略参数传递给某些类，比如 Collections.sort(), Arrays.sort(), 或者一些内部有序的集合（比如 SortedSet，SortedMap 等）。</p></li>
+</ul>
+
+<p>使用方式主要分三步：</p>
+
+<ul>
+<li>创建一个 Comparator 接口的实现类，并赋值给一个对象</li>
+<li>在 compare 方法中针对自定义类写排序规则</li>
+<li>将 Comparator 对象作为参数传递给 排序类的某个方法</li>
+<li>向排序类中添加 compare 方法中使用的自定义类</li>
+</ul>
+
+<pre><code class="language-java">    // 1.创建一个实现 Comparator 接口的对象
+          Comparator comparator = new Comparator() {
+              @Override
+              public int compare(Object object1, Object object2) {
+                  if (object1 instanceof NewBookBean &amp;&amp; object2 instanceof NewBookBean){
+                      NewBookBean newBookBean = (NewBookBean) object1;
+                      NewBookBean newBookBean1 = (NewBookBean) object2;
+                      //具体比较方法参照 自然排序的 compareTo 方法，这里只举个栗子
+                      return newBookBean.getCount() - newBookBean1.getCount();
+                  }
+                  return 0;
+              }
+          };
+  
+          //2.将此对象作为形参传递给 TreeSet 的构造器中
+          TreeSet treeSet = new TreeSet(comparator);
+  
+          //3.向 TreeSet 中添加 步骤 1 中 compare 方法中设计的类的对象
+          treeSet.add(new NewBookBean(&quot;A&quot;,34));
+          treeSet.add(new NewBookBean(&quot;S&quot;,1));
+          treeSet.add( new NewBookBean(&quot;V&quot;,46));
+          treeSet.add( new NewBookBean(&quot;Q&quot;,26));
+</code></pre>
+
+<h4 id="58-内存泄漏和内存溢出区别">58.内存泄漏和内存溢出区别?</h4>
+
+<ul>
+<li><p>内存泄露：程序在申请内存后，无法释放已经申请的内存，就会出现内存泄露</p></li>
+
+<li><p>内存溢出：指程序在申请内存时,没有足够的内存空间供其使用，就会出现内存溢出</p></li>
+</ul>
+
+<h4 id="59-如何实现对象克隆">59.如何实现对象克隆？</h4>
+
+<ul>
+<li>1). 实现Cloneable接口并重写Object类中的clone()方法；</li>
+<li>2). 实现Serializable接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆，代码如下。</li>
+</ul>
+
+<h4 id="60-克隆中深拷贝和浅拷贝分别有什么区别">60.克隆中深拷贝和浅拷贝分别有什么区别？</h4>
+
+<ul>
+<li>1.浅克隆：只复制基本类型的数据，引用类型的数据只复制了引用的地址，引用的对象并没有复制，在新的对象中修改引用类型的数据会影响原对象中的引用。</li>
+<li>2.深克隆：是在引用类型的类中也实现了clone，是clone的嵌套，复制后的对象与原对象之间完全不会影响。</li>
+<li>3.使用序列化也能完成深复制的功能：对象序列化后写入流中，此时也就不存在引用什么的概念了，再从流中读取，生成新的对象，新对象和原对象之间也是完全互不影响的。</li>
+<li>4.使用clone实现的深克隆其实是浅克隆中嵌套了浅克隆，与toString方法类似</li>
+</ul>
+
+<h4 id="61-jdbc的使用步骤">61.JDBC的使用步骤？</h4>
+
+<ul>
+<li><p>加载jdbc驱动</p></li>
+
+<li><p>通过java.lang.Class类的静态方法forName（String className）实现</p></li>
+
+<li><pre><code class="language-java">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+</code></pre>
+
+<ul>
+<li><p>提供JDBC连接的URL</p></li>
+
+<li><pre><code class="language-java">Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/music&quot;, &quot;用户名&quot;, &quot;密码&quot;);
+</code></pre></li>
+</ul></li>
+
+<li><p>创建连接</p></li>
+
+<li><pre><code class="language-java">PreparedStatement ps = conn.prepareStatement(sql);
+</code></pre>
+
+<ul>
+<li><p>执行sql</p></li>
+
+<li><pre><code>有三种方式：
+executeQuery： 返回一个结果集，查询
+executeUpdate：  返回int 用于插入，修改，删除
+execute  ： 返回多个结果集
+ResultSet rs = ps.executeQuery();
+</code></pre></li>
+</ul></li>
+
+<li><p>处理结果</p></li>
+
+<li><pre><code class="language-java">while(rs.next()){   
+  
+  String name = rs.getString(&quot;name&quot;) ;   
+  
+  String pass = rs.getString(1) ; // 此方法比较高效   
+ }   
+</code></pre>
+
+<ul>
+<li>关闭JDBC对象</li>
+</ul>
+
+<h4 id="62-连接池是什么-有什么优点">62.连接池是什么，有什么优点？</h4>
+
+<p>1.1 连接池概述
+连接池就是一次性创建多个连接，将多个连接缓存在内存中 ，形成数据库连接池，如果应用程序需要操作数据库，只需要从连接池中获取一个连接，使用后，并不需要关闭连接，只需要将连接放回到连接池中。</p>
+
+<p>1.2 连接池的优点
+节省创建连接与释放连接性能消耗；</p>
+
+<p>连接池中连接起到复用的作用，提高程序性能。</p>
+
+<h4 id="63-什么是事务">63.什么是事务？</h4>
+
+<p>事务：是数据库操作的最小工作单元，是作为单个逻辑工作单元执行的一系列操作；这些操作作为一个整体一起向系统提交，要么都执行、要么都不执行；事务是一组不可再分割的操作集合（工作逻辑单元）；</p>
+
+<p>事务的属性</p>
+
+<p>事务属性的种类：   传播行为、隔离级别、只读和事务超时</p>
+
+<p>a)   传播行为定义了被调用方法的事务边界。</p>
+
+<p>传播行为</p>
+
+<p>意义</p>
+
+<p>PROPERGATION_MANDATORY</p>
+
+<p>表示方法必须运行在一个事务中，如果当前事务不存在，就抛出异常</p>
+
+<p>PROPAGATION_NESTED</p>
+
+<p>表示如果当前事务存在，则方法应该运行在一个嵌套事务中。否则，它看起来和 PROPAGATION_REQUIRED 看起来没什么俩样</p>
+
+<p>PROPAGATION_NEVER</p>
+
+<p>表示方法不能运行在一个事务中，否则抛出异常</p>
+
+<p>PROPAGATION_NOT_SUPPORTED</p>
+
+<p>表示方法不能运行在一个事务中，如果当前存在一个事务，则该方法将被挂起</p>
+
+<p>PROPAGATION_REQUIRED</p>
+
+<p>表示当前方法必须运行在一个事务中，如果当前存在一个事务，那么该方法运行在这个事务中，否则，将创建一个新的事务</p>
+
+<p>PROPAGATION_REQUIRES_NEW</p>
+
+<p>表示当前方法必须运行在自己的事务中，如果当前存在一个事务，那么这个事务将在该方法运行期间被挂起</p>
+
+<p>PROPAGATION_SUPPORTS</p>
+
+<p>表示当前方法不需要运行在一个是事务中，但如果有一个事务已经存在，该方法也可以运行在这个事务中</p>
+
+<p>b)   隔离级别</p>
+
+<p>在操作数据时可能带来 3 个副作用，分别是<strong>脏读、不可重复读、幻读</strong>。为了避免这 3 中副作用的发生，在标准的 SQL 语句中定义了 4 种隔离级别，分别是未提交读、已提交读、可重复读、可序列化。而在 spring 事务中提供了 5 种隔离级别来对应在 SQL 中定义的 4 种隔离级别，如下：</p>
+
+<p>隔离级别</p>
+
+<p>意义</p>
+
+<p>ISOLATION_DEFAULT</p>
+
+<p>使用后端数据库默认的隔离级别</p>
+
+<p>ISOLATION_READ_UNCOMMITTED</p>
+
+<p>允许读取未提交的数据（对应未提交读），可能导致脏读、不可重复读、幻读</p>
+
+<p>ISOLATION_READ_COMMITTED</p>
+
+<p>允许在一个事务中读取另一个已经提交的事务中的数据（对应已提交读）。可以避免脏读，但是无法避免不可重复读和幻读</p>
+
+<p>ISOLATION_REPEATABLE_READ</p>
+
+<p>一个事务不可能更新由另一个事务修改但尚未提交（回滚）的数据（对应可重复读）。可以避免脏读和不可重复读，但无法避免幻读</p>
+
+<p>ISOLATION_SERIALIZABLE</p>
+
+<p>这种隔离级别是所有的事务都在一个执行队列中，依次顺序执行，而不是并行（对应可序列化）。可以避免脏读、不可重复读、幻读。但是这种隔离级别效率很低，因此，除非必须，否则不建议使用。</p>
+
+<p>c)    只读</p>
+
+<p>如果在一个事务中所有关于数据库的操作都是只读的，也就是说，这些操作只读取数据库中的数据，而并不更新数据，那么应将事务设为只读模式（ READ_ONLY_MARKER ） , 这样更有利于数据库进行优化 。</p>
+
+<p>因为只读的优化措施是事务启动后由数据库实施的，因此，只有将那些具有可能启动新事务的传播行为 (PROPAGATION_NESTED 、 PROPAGATION_REQUIRED 、 PROPAGATION_REQUIRED_NEW) 的方法的事务标记成只读才有意义。</p>
+
+<p>如果使用 Hibernate 作为持久化机制，那么将事务标记为只读后，会将 Hibernate 的 flush 模式设置为 FULSH_NEVER, 以告诉 Hibernate 避免和数据库之间进行不必要的同步，并将所有更新延迟到事务结束。</p>
+
+<p>d)   事务超时</p>
+
+<p>如果一个事务长时间运行，这时为了尽量避免浪费系统资源，应为这个事务设置一个有效时间，使其等待数秒后自动回滚。与设</p>
+
+<p>置“只读”属性一样，事务有效属性也需要给那些具有可能启动新事物的传播行为的方法的事务标记成只读才有意义</p>
+
+<h4 id="64-事务的特征">64.事务的特征？</h4>
+
+<ul>
+<li>1 、原子性
+事务是数据库的逻辑工作单位，事务中包含的各操作要么都做，要么都不做</li>
+<li>2 、一致性
+事 务执行的结果必须是使数据库从一个一致性状态变到另一个一致性状态。因此当数据库只包含成功事务提交的结果时，就说数据库处于一致性状态。如果数据库系统 运行中发生故障，有些事务尚未完成就被迫中断，这些未完成事务对数据库所做的修改有一部分已写入物理数据库，这时数据库就处于一种不正确的状态，或者说是 不一致的状态。</li>
+<li>3 、隔离性
+一个事务的执行不能其它事务干扰。即一个事务内部的操作及使用的数据对其它并发事务是隔离的，并发执行的各个事务之间不能互相干扰。</li>
+<li>4 、持续性
+也称永久性，指一个事务一旦提交，它对数据库中的数据的改变就应该是永久性的。接下来的其它操作或故障不应该对其执行结果有任何影响。</li>
+</ul>
+
+<h4 id="65-java中包括哪四种引用">65.Java中包括哪四种引用？</h4>
+
+<ul>
+<li>强引用：
+当我们使用new创建对象时，被创建的对象就是强引用，如Object object = new Object()，其中的object就是一个强引用了。如果一个对象具有强引用，JVM就不会去GC它，JVM宁可会报OOM来终止程序，也不回收该对象。</li>
+<li>软引用:
+如果一个对象只具备软引用，如果内存空间足够，那么JVM就不会GC它，如果内存空间不足了，就会GC该对象。</li>
+<li>弱引用:
+如果一个对象只具有弱引用，只要JVM的GC线程检测到了，就会立即回收。弱引用的生命周期要比软引用短很多。不过，如果垃圾回收器是一个优先级很低的线程，也不一定会很快就会释放掉软引用的内存。</li>
+<li>虚引用：
+如果一个对象只具有虚引用，那么它就和没有任何引用一样，随时会被JVM当作垃圾进行GC。</li>
+</ul>
+
+<h4 id="66-谈谈你对类加载器的理解">66.谈谈你对类加载器的理解？</h4>
+
+<ul>
+<li>https 协议需要到 ca 申请证书，目前市面上的免费证书也不少，收费的也都比较贵。</li>
+<li>http 是超文本传输协议，信息是明文传输，https 则是具有安全性的 ssl 加密传输协议。</li>
+<li>http 和 https 使用的是完全不同的连接方式，用的端口也不一样，前者是 80，后者是 443。</li>
+<li>http 的连接很简单，是无状态的；H</li>
+</ul>
+
+<h4 id="67-java中native关键字作用">67.java中native关键字作用？</h4>
+
+<ul>
+<li><p>native关键字在java开发过程中是使用不到的，native关键字是与c++联合开发时使用，他是一个java调用其他接口的一个声明关键字</p></li>
+
+<li><p>Java&mdash;&mdash;&gt;JNI&mdash;&ndash;&gt;c++/c</p></li>
+
+<li><p>java&lt;&mdash;&mdash;JNI&lt;&mdash;&mdash;-c++/c</p></li>
+
+<li><p>native不能与abstract同用，因为native表示这些方法是有实现体的而abstract没有实现体，那么两者矛盾，肯定不能一起使用</p></li>
+</ul>
+
+<h4 id="68-transient关键字的作用">68.transient关键字的作用？</h4>
+
+<ul>
+<li>一个对象只要实现了Serilizable接口，这个对象就可以被序列化，java的这种序列化模式为开发者提供了很多便利，我们可以不必关系具体序列化的过程，只要这个类实现了Serilizable接口，这个类的所有属性和方法都会自动序列化。</li>
+<li>java 的transient关键字为我们提供了便利，你只需要实现Serilizable接口，将不需要序列化的属性前添加关键字transient，序列化对象的时候，这个属性就不会序列化到指定的目的地中</li>
+</ul>
+
+<h4 id="69-volatile关键字的作用">69.volatile关键字的作用？</h4>
+
+<ul>
+<li>volatile关键字是JVM提供的一种<strong>轻量级</strong>的同步机制</li>
+<li><strong>作用</strong></li>
+<li>可见性：即一个线程修改了公共数据，新值对于其他线程来说是可以立即得知的。</li>
+<li>原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。</li>
+<li>有序性：程序执行的顺序按照代码的先后顺序执行。</li>
+<li><strong>volatile关键字能禁止指令重排序</strong></li>
+<li>1）当程序执行到volatile变量的读操作或者写操作时，在其前面的操作的更改肯定全部已经进行，且结果已经对后面的操作可见；在其后面的操作肯定还没有进行；</li>
+<li>2）在进行指令优化时，不能将在对volatile变量访问的语句放在其后面执行，也不能把volatile变量后面的语句放到其前面执行。</li>
+</ul>
+
+<h4 id="70-什么是jni">70.什么是JNI?</h4>
+
+<ul>
+<li>JNI(Java Native Interface)这是一个本机编程的接口，它也是java jdk（开发工具包）的一部分，JNI可以支持java中使用其他语言，java要调用其他语言的接口，需要经过他处理。java所谓的跨平台，在一定程度上放弃了底层操作，因为不同的硬件或者操作系统底层的操作都是不一样的。</li>
+</ul>
 
 <h4 id="71-tcp和udp的区别-三次握手和四次挥手">71.TCP和UDP的区别，三次握手和四次挥手？</h4>
 
@@ -826,24 +1343,18 @@ Person person = new Person();
 <p><strong>UDP的缺点</strong>： 不可靠，不稳定 因为UDP没有TCP那些可靠的机制，在数据传递时，如果网络质量不好，就会很容易丢包</p>
 
 <ul>
-<li><strong>为什么要三次握手？</strong>
-
-<ul>
+<li><strong>为什么要三次握手？</strong></li>
 <li>三次握手的目的是建立可靠的通信信道，说到通讯，简单来说就是数据的发送与接收，而三次握手最主要的目的就是双方确认自己与对方的发送与接收机能正常。</li>
 <li><strong>第一次握手,client:你准备好了吗?</strong></li>
 <li><strong>第二次握手,server: 我准备好了,你呢?</strong></li>
 <li><strong>第三次握手,client: 我也准备好了.我们开始吧!</strong></li>
 <li>核心思想就是,客户端和服务器分别确认对方是否准备好建立连接,并且每一次的确认信息都要得到对方的回应,两次确认和两次回应本应该是四次,但是第二次握手时,服务器将发出的确认信息和对客户端的回应做成一条信息发送了,所以就是三次握手.</li>
-</ul></li>
-<li>为什么要四次挥手？
-
-<ul>
+<li>为什么要四次挥手？</li>
 <li>根本原因是，一方发送FIN只表示自己发完了所有要发的数据，但还允许对方继续把没发完的数据发过来。</li>
 <li><strong>第一次挥手,client:我说完了</strong></li>
 <li><strong>第二次挥手,server:我知道了(但此时server可能还有话要说)</strong></li>
 <li><strong>第三次挥手,server:我也说完了</strong></li>
 <li><strong>第四次挥手,client:我知道了,(双方挂了电话)</strong></li>
-</ul></li>
 </ul>
 
 <h4 id="72-常见的网络协议有">72.常见的网络协议有？</h4>
@@ -851,11 +1362,9 @@ Person person = new Person();
 <ul>
 <li><p><strong>TCP/IP协议、UDP协议、HTTP协议、FTP协议、Telnet协议、SMTP协议、NFS协议等。</strong></p></li>
 
-<li><p><strong>TCP/IP 协议</strong></p>
+<li><p><strong>TCP/IP 协议</strong></p></li>
 
-<ul>
-<li>传输控制协议/因特网互联协议，又名网络通讯协议，是Internet最基本的协议、Internet国际互联网络的基础，由网络层的IP协议和传输层的TCP协议组成。</li>
-</ul></li>
+<li><p>传输控制协议/因特网互联协议，又名网络通讯协议，是Internet最基本的协议、Internet国际互联网络的基础，由网络层的IP协议和传输层的TCP协议组成。</p></li>
 
 <li><p><strong>IP</strong></p></li>
 
@@ -875,23 +1384,17 @@ Person person = new Person();
 
 <li><p>FTP协议：文件传输协议。</p></li>
 
-<li><p><strong>Telnet 协议</strong></p>
+<li><p><strong>Telnet 协议</strong></p></li>
 
-<ul>
-<li>Telnet协议（远程登录），是 TCP/IP 协议族中应用最广泛的协议，是Internet远程登录服务的标准协议和主要方式。Telnet协议的目的是提供一个相对通用的，双向的，面向八位字节的通信方法，允许界面终端设备和面向终端的过程能通过一个标准过程进行互相交互。应用Telnet协议能够把本地用户所使用的计算机变成远程主机系统的一个终端。
-
-<br /></li>
-</ul></li>
+<li><p>Telnet协议（远程登录），是 TCP/IP 协议族中应用最广泛的协议，是Internet远程登录服务的标准协议和主要方式。Telnet协议的目的是提供一个相对通用的，双向的，面向八位字节的通信方法，允许界面终端设备和面向终端的过程能通过一个标准过程进行互相交互。应用Telnet协议能够把本地用户所使用的计算机变成远程主机系统的一个终端。</p></li>
 
 <li><p>SMTP 协议</p></li>
 
 <li><p>SMTP协议：简单邮件传输协议，是一个相对简单的基于文本的协议。在其之上指定了一条消息的一个或多个接收者（在大多数情况下被确认是存在的），然后消息文本会被传输。</p></li>
 
-<li><p>NFS协议</p>
+<li><p>NFS协议</p></li>
 
-<ul>
-<li>NFS，即网络文件系统，是一种用于文件共享的协议，允许一个系统在网络上与它人共享目录和文件。通过使用NFS，用户和程序可以像访问本地文件一样访问远端系统上的文件。</li>
-</ul></li>
+<li><p>NFS，即网络文件系统，是一种用于文件共享的协议，允许一个系统在网络上与它人共享目录和文件。通过使用NFS，用户和程序可以像访问本地文件一样访问远端系统上的文件。</p></li>
 </ul>
 
 <h4 id="73-cookie和session">73.cookie和session</h4>
@@ -924,15 +1427,12 @@ Person person = new Person();
 <p><img src="C:Users81509myblogcontentimagesJVM模型.jpg" alt="JVM模型" /></p>
 
 <ul>
-<li><p><strong>类加载器（ClassLoader）</strong></p>
+<li><p><strong>类加载器（ClassLoader）</strong></p></li>
 
-<ul>
-<li>在JVM启动或运行时加载需要的class文件到JVM中</li>
-</ul></li>
+<li><p>在JVM启动或运行时加载需要的class文件到JVM中</p></li>
 
-<li><p><strong>内存区（也叫运行时数据区）</strong></p>
+<li><p><strong>内存区（也叫运行时数据区）</strong></p></li>
 
-<ul>
 <li><p>JVM运行的时候所分配的区域，内存区可以划分为以下几个部分：</p></li>
 
 <li><p>a、方法区</p></li>
@@ -962,7 +1462,6 @@ Person person = new Person();
 
 <pre><code>  用于保存当前线程执行的内存地址；由于JVM是多线程的（多个线程轮流切换），为了保证线程切换回来后，还能恢复到原先状态，就需要一个独立的计数器，来记录之前中断的地方，因此程序计数器也是线程私有的；
 </code></pre></li>
-</ul></li>
 
 <li><p><strong>3、执行引擎</strong></p></li>
 </ul>
@@ -974,6 +1473,98 @@ Person person = new Person();
 </ul>
 
 <p>​         主要调用C或者C++实现的本地方法及返回结果；</p>
+
+<h4 id="77-面向对象七大原则">77、面向对象七大原则？</h4>
+
+<ol>
+<li><strong>单一职责原则</strong>（Single Responsibility Principle）</li>
+</ol>
+
+<p>每一个类应该专注于做一件事情。</p>
+
+<ol>
+<li><strong>里氏替换原则</strong>（Liskov Substitution Principle）</li>
+</ol>
+
+<p>超类存在的地方，子类是可以替换的。</p>
+
+<ol>
+<li><strong>依赖倒置原则</strong>（Dependence Inversion Principle）</li>
+</ol>
+
+<p>实现尽量依赖抽象，不依赖具体实现。</p>
+
+<ol>
+<li><strong>接口隔离原则（</strong>Interface Segregation Principle）</li>
+</ol>
+
+<p>应当为客户端提供尽可能小的单独的接口，而不是提供大的总的接口。</p>
+
+<ol>
+<li><strong>迪米特法则</strong>（Law Of Demeter）</li>
+</ol>
+
+<p>又叫最少知识原则，一个软件实体应当尽可能少的与其他实体发生相互作用。</p>
+
+<ol>
+<li><strong>开闭原则</strong>（Open Close Principle）</li>
+</ol>
+
+<p>面向扩展开放，面向修改关闭。</p>
+
+<ol>
+<li><strong>组合/聚合复用原则</strong>（Composite/Aggregate Reuse Principle CARP）</li>
+</ol>
+
+<p>尽量使用合成/聚合达到复用，尽量少用继承。原则： 一个类中有另一个类的对象。</p>
+
+<h4 id="78-jsp的九大内置对象和四大作用域和两个跳转">78、jsp的九大内置对象和四大作用域和两个跳转</h4>
+
+<ul>
+<li><strong>jsp九大内置对象</strong></li>
+<li>request：request内置对象，提供cookie，header，session内数据方法</li>
+<li>response：用于响应客户请求</li>
+<li>page：page对象指jsp当前页面本身</li>
+<li>session：会话对象，存储本次会话的有关信息</li>
+<li>application：应用级别对象，对于网站所有用户而言，用于用户之间的数据共享</li>
+<li>out：用于输出到HTML页面上</li>
+<li>exception：exception内置对象是用来处理页面异常错误</li>
+<li>config：config内置对象是ServletConfig类的实例，用来传递初始化信息</li>
+<li>pageContext：它相当于页面中所有其他对象功能的最大集成者，即使用它可以访问到本页面中所有其他对象</li>
+<li><strong>四大作用域</strong></li>
+<li>page:只对当前页面有效</li>
+<li>request：再一次请求中有效，通过服务器跳转变量存在，但如果通过客户端跳转，变量消失</li>
+<li>session：再一次会话中有效，在页面跳转，跳转到新页面，变量都不会消失，如果关闭浏览器重新打开，则视为一次新的会话，变量消失。</li>
+<li>application：应用级别作用域，客户端的任何行为都不会使该变量消失，除非服务器主动清除变量或者服务器重启</li>
+<li>作用范围page&lt;request&lt;session&lt;application</li>
+<li><strong>两个跳转</strong></li>
+<li>客户端跳转</li>
+<li>服务端跳转</li>
+</ul>
+
+<h4 id="79-事务产生的原因">79、事务产生的原因？</h4>
+
+<p>脏读:读取了未提交的新事物，然后被回滚了
+事务级别:T1读取,T1修改,T2读取,T1回滚,T2就是脏读
+不可重复读:读已提交,读取了提交的新事物，指更新操作
+锁字段:T1读取,T2读取 T2修改 T1再次读取就是不可重复的
+幻读:也是读取了提交的新事物，指增删操作行级别:T1读取,T2添加或删除,T1读取,出现幻读</p>
+
+<h4 id="80-线程池">80、线程池</h4>
+
+<ul>
+<li><p>线程池是一种多线程处理形式，处理过程中将任务添加到队列，然后在创建线程后自动启动这些任务</p></li>
+
+<li><p><strong>线程池的组成部分</strong>
+1、线程池管理器（ThreadPool）：用于创建并管理线程池，包括 创建线程池，销毁线程池，添加新任务；
+2、工作线程（PoolWorker）：线程池中线程，在没有任务时处于等待状态，可以循环的执行任务；
+3、任务接口（Task）：每个任务必须实现的接口，以供工作线程调度任务的执行，它主要规定了任务的入口，任务执行完后的收尾工作，任务的执行状态等；</p></li>
+</ul>
+
+<p>4、任务队列（taskQueue）：用于存放没有处理的任务。提供一种缓冲机制。</p>
+
+<h4 id="81-线程之间转化">81、线程之间转化？</h4></li>
+</ul>
 
     </div>
     <div class="post-footer">
